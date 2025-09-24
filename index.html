@@ -1,25 +1,52 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Rentfagelu</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="menuPrincipal">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="#inicio">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#propiedades">Propiedades</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contacto">Contacto</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#login">Iniciar sesión</a>
-        </li>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rentfagelu</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">Rentfagelu</a>
+      </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="propiedades.html">Propiedades</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
-    </div>
-  </div>
-</nav>
+      <div class="cart">
+        <a href="#">Carrito (<span id="cart-count">0</span>)</a>
+      </div>
+      <div class="user-actions">
+        <a href="login.html">Iniciar sesión</a> | <a href="registro.html">Registrar usuario</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>RENTFAGELU</h1>
+      <p>Arriendo de casas en Santiago de Chile. Encuentra tu hogar ideal de forma rápida y segura.</p>
+      <button>Ver propiedades</button>
+    </section>
+
+    <section class="products-list">
+      <h2>Propiedades disponibles</h2>
+      <div id="products-container" class="product-grid">
+        <!-- Aquí se mostrarán las propiedades con JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Rentfagelu. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
