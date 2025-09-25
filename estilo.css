@@ -333,11 +333,11 @@ footer {
     }
 
     #products-list .img-container {
-        background-image: url(img/D_NQ_NP_2X_914377-MLC85664600807_062025-F-condominio-quillayes-de-chicureo.webp);
-        background-size: cover;
-        background-position: right;
-        height: 500px;
-        width: 400px;
+    background-image: url(img/D_NQ_NP_2X_914377-MLC85664600807_062025-F-condominio-quillayes-de-chicureo.webp);
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    width: 160px;
     }
 
 
@@ -362,11 +362,11 @@ footer {
     }
 
     #products-list2 .img-container {
-        background-image: url(img/D_NQ_NP_2X_777412-MLC87507815933_072025-F-borde-blanco.webp);
-        background-size: cover;
-        background-position: right;
-        height: 500px;
-        width: 400px;
+    background-image: url(img/D_NQ_NP_2X_777412-MLC87507815933_072025-F-borde-blanco.webp);
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    width: 160px;
     }
 
     #products-list3 .container {
@@ -390,11 +390,11 @@ footer {
     }
 
     #products-list3 .img-container {
-        background-image: url(img/D_NQ_NP_2X_821086-MLC85362248218_062025-F-alto-polkura.webp);
-        background-size: cover;
-        background-position: right;
-        height: 500px;
-        width: 400px;
+    background-image: url(img/D_NQ_NP_2X_821086-MLC85362248218_062025-F-alto-polkura.webp);
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    width: 160px;
     }
 
     #products-list4 .container {
@@ -418,11 +418,11 @@ footer {
     }
 
     #products-list4 .img-container {
-        background-image: url(img/D_NQ_NP_2X_600190-MLC90050130211_082025-F-condominio-quillayes-de-la-dehesa-ii.webp);
-        background-size: cover;
-        background-position: right;
-        height: 500px;
-        width: 400px;
+    background-image: url(img/D_NQ_NP_2X_600190-MLC90050130211_082025-F-condominio-quillayes-de-la-dehesa-ii.webp);
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    width: 160px;
     }
 
 
