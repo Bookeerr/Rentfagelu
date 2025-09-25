@@ -278,7 +278,7 @@ footer {
 }
 
 /* RESPONSIVE */
-@media (min-width: 0px) {
+@media (min-width: 768px) {
     header {
         padding: 12px 15px;
         height: auto;
