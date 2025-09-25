@@ -1,4 +1,4 @@
-/*cuerpo de la página */
+/* Estilos generales para el cuerpo de la página */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -8,7 +8,7 @@ body {
     line-height: 1.4;
 }
 
-/*HEADER*/
+/* HEADER */
 header {
     background-color: #ffffff;
     padding: 12px 20px;
@@ -31,7 +31,7 @@ header {
     letter-spacing: 0.5px;
 }
 
-/* Menú  */
+/* Menú */
 nav ul {
     list-style: none;
     margin: 0;
@@ -59,15 +59,17 @@ nav ul a:hover {
     background-color: #f3f4f6;
 }
 
-/* Botones  */
-.cart, .user-actions {
+/* Botones */
+.cart,
+.user-actions {
     display: flex;
     align-items: center;
     gap: 16px;
     font-size: 14px;
 }
 
-.cart a, .user-actions a {
+.cart a,
+.user-actions a {
     text-decoration: none;
     color: #4b5563;
     font-weight: 500;
@@ -76,7 +78,8 @@ nav ul a:hover {
     transition: all 0.3s ease;
 }
 
-.cart a:hover, .user-actions a:hover {
+.cart a:hover,
+.user-actions a:hover {
     color: #111827;
     background-color: #f3f4f6;
 }
@@ -128,7 +131,7 @@ nav ul a:hover {
     border-color: #ffffff;
 }
 
-/* PRODUCTOS  */
+/* PRODUCTOS */
 .products-list {
     padding: 60px 20px;
     text-align: center;
@@ -157,7 +160,7 @@ nav ul a:hover {
     border: 1px solid #f3f4f6;
     border-radius: 8px;
     padding: 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     text-align: center;
     transition: all 0.3s ease;
     overflow: hidden;
@@ -165,7 +168,7 @@ nav ul a:hover {
 
 .property-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     border-color: #e5e7eb;
 }
 
@@ -220,7 +223,7 @@ nav ul a:hover {
     border-color: #4b5563;
 }
 
-/* FOOTER  */
+/* FOOTER */
 footer {
     text-align: center;
     padding: 30px 20px;
@@ -230,40 +233,115 @@ footer {
     font-weight: 300;
 }
 
+/* ESTILOS ADICIONALES PARA LAS PROPIEDADES */
+.property-zone {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 8px 0;
+    font-style: italic;
+}
+
+.btn-ver-detalles {
+    background-color: #4b5563;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-ver-detalles:hover {
+    background-color: #374151;
+}
+
+.btn-favorito {
+    background-color: transparent;
+    color: #4b5563;
+    border: 1px solid #d1d5db;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-favorito:hover {
+    background-color: #ef4444;
+    color: white;
+    border-color: #ef4444;
+}
+
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (min-width: 0px) {
     header {
         padding: 12px 15px;
         height: auto;
         flex-wrap: wrap;
         gap: 10px;
     }
-    
+
     nav ul {
         gap: 12px;
     }
-    
+
     nav ul a {
         font-size: 13px;
         padding: 6px 12px;
     }
-    
+
     .hero {
         padding: 80px 15px 60px;
         margin-top: 100px;
     }
-    
+
     .hero h1 {
         font-size: 2rem;
     }
-    
+
     .product-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
-    .cart, .user-actions {
+
+    .cart,
+    .user-actions {
         gap: 10px;
         font-size: 13px;
     }
+
+    #products-list .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #products-list .texto {
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    #products-list h2 {
+        margin-top: 0px;
+    }
+
+    #products-list .img-container {
+        background-image: url(img/D_NQ_NP_2X_600190-MLC90050130211_082025-F-condominio-quillayes-de-la-dehesa-ii.webp);
+        background-size: cover;
+        background-position: right;
+        height: 500px;
+        width: 400px;
+    }
+
+    
 }
