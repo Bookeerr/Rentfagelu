@@ -338,6 +338,9 @@ footer {
     background-position: center;
     height: 220px;
     width: 160px;
+    border: 2px solid #4b5563;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
     }
 
 
@@ -367,6 +370,9 @@ footer {
     background-position: center;
     height: 220px;
     width: 160px;
+    border: 2px solid #4b5563;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
     }
 
     #products-list3 .container {
@@ -395,6 +401,9 @@ footer {
     background-position: center;
     height: 220px;
     width: 160px;
+    border: 2px solid #4b5563;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
     }
 
     #products-list4 .container {
@@ -423,6 +432,9 @@ footer {
     background-position: center;
     height: 220px;
     width: 160px;
+    border: 2px solid #4b5563;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
     }
 
 
