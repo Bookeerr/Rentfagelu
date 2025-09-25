@@ -1,5 +1,33 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Estilos para login y registro */
+.login-container, .register-container {
+    max-width: 400px;
+        margin: 120px auto 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(55,65,81,0.10);
+    padding: 32px 18px 24px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-container h2, .register-container h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    text-align: center;
+    word-break: break-word;
+    letter-spacing: 0.5px;
+}
+    main {
+        padding-top: 70px;
+    }
+
+    font-family: 'Segoe UI',
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fefefe;
@@ -9,7 +37,7 @@ body {
 
 header {
     background-color: #ffffff;
-    padding: 12px 20px;
+    padding: 40px 20px;
     border-bottom: 1px solid #e5e7eb;
     display: flex;
     justify-content: space-between;
@@ -17,7 +45,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 2000;
     height: 64px;
 }
 
@@ -86,7 +114,7 @@ nav ul a:hover {
     padding: 100px 20px 80px;
     background: linear-gradient(135deg, #4b5563 0%, #6b7280 100%);
     color: #f9fafb;
-    margin-top: 64px;
+    margin-top: 0;
 }
 
 .hero h1 {
@@ -141,6 +169,144 @@ nav ul a:hover {
     font-weight: 300;
     letter-spacing: 0.5px;
 }
+
+#products-list .container {
+    display: flex;
+    justify-content: center;
+}
+
+#products-list .texto {
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#products-list h2 {
+    margin-top: 0px;
+}
+
+#products-list .titulo {
+    padding: 0px;
+    justify-content: center;
+}
+
+#products-list .img-container {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    background-image: url(img/D_NQ_NP_2X_914377-MLC85664600807_062025-F-condominio-quillayes-de-chicureo.webp);
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    width: 160px;
+    border: 2px solid #4b5563;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
+}
+
+#products-list2 .container {
+    display: flex;
+    justify-content: center;
+}
+
+#products-list2 .texto {
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#products-list2 h2 {
+    margin-top: 0px;
+}
+
+#products-list2 .img-container {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    background-image: url(img/D_NQ_NP_2X_777412-MLC87507815933_072025-F-borde-blanco.webp);
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    width: 160px;
+    border: 2px solid #4b5563;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
+}
+
+#products-list3 .container {
+    display: flex;
+    justify-content: center;
+}
+
+#products-list3 .texto {
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#products-list3 h2 {
+    margin-top: 0px;
+}
+
+#products-list3 .img-container {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    background-image: url(img/D_NQ_NP_2X_821086-MLC85362248218_062025-F-alto-polkura.webp);
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    width: 160px;
+    border: 2px solid #4b5563;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
+}
+
+#products-list4 .container {
+    display: flex;
+    justify-content: center;
+}
+
+#products-list4 .texto {
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#products-list4 h2 {
+    margin-top: 0px;
+}
+
+#products-list4 .img-container {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    background-image: url(img/D_NQ_NP_2X_600190-MLC90050130211_082025-F-condominio-quillayes-de-la-dehesa-ii.webp);
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    width: 160px;
+    border: 2px solid #4b5563;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
+}
+
 
 .product-grid {
     display: grid;
@@ -236,20 +402,45 @@ footer {
 }
 
 .btn-ver-detalles {
-    background-color: #4b5563;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+    background: linear-gradient(90deg, #4b5563 0%, #6b7280 100%);
+    color: #fff;
+    border: 1.5px solid #d1d5db;
+    padding: 12px 32px;
     cursor: pointer;
-    border-radius: 6px;
-    width: 100%;
-    margin-top: 10px;
-    transition: all 0.3s ease;
-    font-weight: 500;
+    border-radius: 8px;
+    width: auto;
+    margin: 18px auto 0 auto;
+    display: block;
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 98, 255, 0.08);
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
+.btn-ver-mas {
+    background: linear-gradient(rgba(75, 85, 99, 0.8), rgba(107, 114, 128, 0.8));
+    color: #fff;
+    border: 1.5px solid #d1d5db;
+    padding: 12px 32px;
+    cursor: pointer;
+    border-radius: 50px;
+    width: auto;
+    margin: 18px auto 0 auto;
+    display: block;
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 98, 255, 0.08);
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    
+}
 .btn-ver-detalles:hover {
-    background-color: #374151;
+    background: #374151;
+    border-radius: 15px;
+    color: #111827;
+    box-shadow: 0 4px 16px rgba(55, 65, 81, 0.12);
+    
 }
 
 .btn-favorito {
@@ -271,11 +462,12 @@ footer {
     border-color: #ef4444;
 }
 
-/* Botón y galería "Ver más" */
 
-
-/* RESPONSIVE */
 @media (min-width: 768px) {
+    main {
+        padding-top: 90px;
+    }
+
     header {
         padding: 12px 15px;
         height: auto;
@@ -333,14 +525,16 @@ footer {
     }
 
     #products-list .img-container {
-    background-image: url(img/D_NQ_NP_2X_914377-MLC85664600807_062025-F-condominio-quillayes-de-chicureo.webp);
-    background-size: cover;
-    background-position: center;
-    height: 220px;
-    width: 160px;
-    border: 2px solid #4b5563;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
+        margin-top: 32px;
+        margin-bottom: 24px;
+        background-image: url(img/D_NQ_NP_2X_914377-MLC85664600807_062025-F-condominio-quillayes-de-chicureo.webp);
+        background-size: cover;
+        background-position: center;
+        height: 250px;
+        width: 400px;
+        border: 2px solid #4b5563;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
     }
 
 
@@ -365,14 +559,16 @@ footer {
     }
 
     #products-list2 .img-container {
-    background-image: url(img/D_NQ_NP_2X_777412-MLC87507815933_072025-F-borde-blanco.webp);
-    background-size: cover;
-    background-position: center;
-    height: 220px;
-    width: 160px;
-    border: 2px solid #4b5563;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
+        margin-top: 32px;
+        margin-bottom: 24px;
+        background-image: url(img/D_NQ_NP_2X_777412-MLC87507815933_072025-F-borde-blanco.webp);
+        background-size: cover;
+        background-position: center;
+        height: 250px;
+        width: 400px;
+        border: 2px solid #4b5563;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
     }
 
     #products-list3 .container {
@@ -396,14 +592,16 @@ footer {
     }
 
     #products-list3 .img-container {
-    background-image: url(img/D_NQ_NP_2X_821086-MLC85362248218_062025-F-alto-polkura.webp);
-    background-size: cover;
-    background-position: center;
-    height: 220px;
-    width: 160px;
-    border: 2px solid #4b5563;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
+        margin-top: 32px;
+        margin-bottom: 24px;
+        background-image: url(img/D_NQ_NP_2X_821086-MLC85362248218_062025-F-alto-polkura.webp);
+        background-size: cover;
+        background-position: center;
+        height: 250px;
+        width: 400px;
+        border: 2px solid #4b5563;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
     }
 
     #products-list4 .container {
@@ -427,17 +625,108 @@ footer {
     }
 
     #products-list4 .img-container {
-    background-image: url(img/D_NQ_NP_2X_600190-MLC90050130211_082025-F-condominio-quillayes-de-la-dehesa-ii.webp);
-    background-size: cover;
-    background-position: center;
-    height: 220px;
-    width: 160px;
-    border: 2px solid #4b5563;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
+        margin-top: 32px;
+        margin-bottom: 24px;
+        background-image: url(img/D_NQ_NP_2X_600190-MLC90050130211_082025-F-condominio-quillayes-de-la-dehesa-ii.webp);
+        background-size: cover;
+        background-position: center;
+        height: 250px;
+        width: 400px;
+        border: 2px solid #4b5563;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
     }
 
 
 
 
 }
+
+    .login-container {
+      max-width: 400px;
+      margin: 120px auto 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(55,65,81,0.10);
+      padding: 40px 32px 32px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: 700px) {
+      .login-container {
+        margin-top: 90px;
+      }
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2000;
+      }
+    }
+    .login-container h2 {
+      color: #111827;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .login-container label {
+      color: #374151;
+      font-weight: 500;
+      margin-bottom: 8px;
+      display: block;
+      font-size: 1rem;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      margin-bottom: 18px;
+      font-size: 1rem;
+      background: #f9fafb;
+      color: #374151;
+      transition: border-color 0.2s;
+    }
+    .login-container input:focus {
+      border-color: #4b5563;
+      outline: none;
+    }
+    .login-container button {
+      width: 100%;
+      background-color: #4b5563;
+      color: #fff;
+      border: none;
+      padding: 12px 0;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+    .login-container button:hover {
+      background-color: #374151;
+    }
+    .login-container .extra {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #6b7280;
+    }
+    .login-container .extra a {
+      color: #4b5563;
+      text-decoration: underline;
+      font-weight: 500;
+      margin-left: 4px;
+    }
+    @media (max-width: 500px) {
+      .login-container {
+        margin-top: 80px;
+        padding: 24px 8px 24px 8px;
+      }
+      
+    }
+    
