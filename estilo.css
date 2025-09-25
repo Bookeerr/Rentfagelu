@@ -1,24 +1,29 @@
 body {
-/* Estilos para login y registro */
-.login-container, .register-container {
-    max-width: 400px;
+
+    /* Estilos para login y registro */
+    .login-container,
+    .register-container {
+        max-width: 400px;
         margin: 120px auto 0 auto;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 16px rgba(55,65,81,0.10);
-    padding: 32px 18px 24px 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.login-container h2, .register-container h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 18px;
-    text-align: center;
-    word-break: break-word;
-    letter-spacing: 0.5px;
-}
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 16px rgba(55, 65, 81, 0.10);
+        padding: 32px 18px 24px 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-container h2,
+    .register-container h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 18px;
+        text-align: center;
+        word-break: break-word;
+        letter-spacing: 0.5px;
+    }
+
     main {
         padding-top: 70px;
     }
@@ -57,16 +62,29 @@ header {
     letter-spacing: 0.5px;
 }
 
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 32px;
+}
+
+nav .logo {
+    margin-right: 32px;
+}
+
 nav ul {
+    display: flex;
+    align-items: center;
+    gap: 32px;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    gap: 24px;
 }
 
 nav ul li {
-    margin: 0;
+    display: inline-block;
 }
 
 nav ul a {
@@ -111,7 +129,7 @@ nav ul a:hover {
 
 .hero {
     text-align: center;
-    padding: 100px 20px 80px;
+    padding: 90px 20px 60px;
     background: linear-gradient(135deg, #4b5563 0%, #6b7280 100%);
     color: #f9fafb;
     margin-top: 0;
@@ -433,14 +451,15 @@ footer {
     letter-spacing: 0.5px;
     box-shadow: 0 2px 8px rgba(0, 98, 255, 0.08);
     transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-    
+
 }
+
 .btn-ver-detalles:hover {
     background: #374151;
     border-radius: 15px;
     color: #111827;
     box-shadow: 0 4px 16px rgba(55, 65, 81, 0.12);
-    
+
 }
 
 .btn-favorito {
@@ -642,91 +661,243 @@ footer {
 
 }
 
+.login-container {
+    max-width: 400px;
+    margin: 120px auto 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(55, 65, 81, 0.10);
+    padding: 40px 32px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
     .login-container {
-      max-width: 400px;
-      margin: 120px auto 0 auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 16px rgba(55,65,81,0.10);
-      padding: 40px 32px 32px 32px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    @media (max-width: 700px) {
-      .login-container {
         margin-top: 90px;
-      }
-      header {
+    }
+
+    header {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         z-index: 2000;
-      }
     }
-    .login-container h2 {
-      color: #111827;
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 24px;
-      text-align: center;
-    }
-    .login-container label {
-      color: #374151;
-      font-weight: 500;
-      margin-bottom: 8px;
-      display: block;
-      font-size: 1rem;
-    }
-    .login-container input {
-      width: 100%;
-      padding: 10px 12px;
-      border: 1px solid #d1d5db;
-      border-radius: 6px;
-      margin-bottom: 18px;
-      font-size: 1rem;
-      background: #f9fafb;
-      color: #374151;
-      transition: border-color 0.2s;
-    }
-    .login-container input:focus {
-      border-color: #4b5563;
-      outline: none;
-    }
-    .login-container button {
-      width: 100%;
-      background-color: #4b5563;
-      color: #fff;
-      border: none;
-      padding: 12px 0;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.2s;
-      margin-top: 8px;
-    }
-    .login-container button:hover {
-      background-color: #374151;
-    }
-    .login-container .extra {
-      margin-top: 18px;
-      text-align: center;
-      font-size: 0.95rem;
-      color: #6b7280;
-    }
-    .login-container .extra a {
-      color: #4b5563;
-      text-decoration: underline;
-      font-weight: 500;
-      margin-left: 4px;
-    }
-    @media (max-width: 500px) {
-      .login-container {
+}
+
+.login-container h2 {
+    color: #111827;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.login-container label {
+    color: #374151;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 1rem;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-size: 1rem;
+    background: #f9fafb;
+    color: #374151;
+    transition: border-color 0.2s;
+}
+
+.login-container input:focus {
+    border-color: #4b5563;
+    outline: none;
+}
+
+.login-container button {
+    width: 100%;
+    background-color: #4b5563;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+}
+
+.login-container button:hover {
+    background-color: #374151;
+}
+
+.login-container .extra {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+.login-container .extra a {
+    color: #4b5563;
+    text-decoration: underline;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+@media (max-width: 500px) {
+    .login-container {
         margin-top: 80px;
         padding: 24px 8px 24px 8px;
-      }
-      
     }
-    
+
+}
+
+/* Visual para la página Nosotros */
+.nosotros-equipo {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(55, 65, 81, 0.08);
+    padding: 32px;
+    text-align: center;
+}
+
+.nosotros-equipo h2 {
+    color: #111827;
+    margin-bottom: 18px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.nosotros-equipo p {
+    color: #374151;
+    font-size: 1.08rem;
+    line-height: 1.6;
+}
+
+/* --- CONTACTO --- */
+.contacto-form {
+    max-width: 420px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(55, 65, 81, 0.08);
+    padding: 32px;
+}
+
+.contacto-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contacto-form label {
+    color: #374151;
+    font-weight: 500;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f9fafb;
+    color: #374151;
+    transition: border-color 0.2s;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    border-color: #4b5563;
+    outline: none;
+}
+
+.contacto-form button {
+    width: 100%;
+    background-color: #4b5563;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+}
+
+.contacto-form button:hover {
+    background-color: #374151;
+}
+
+/* Menú principal alineado en una sola línea */
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 32px;
+}
+
+nav .logo {
+    margin-right: 32px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav .cart {
+    margin-left: 16px;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 160px;
+    margin-left: auto;
+    margin-right: 0;
+    font-size: 14px;
+ 
+}
+
+/* Responsive: menú en columna en pantallas pequeñas */
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 12px;
+    }
+
+    nav ul {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .user-actions {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+}
