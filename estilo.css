@@ -1,8 +1,7 @@
-body {
 /* Estilos para login y registro */
 .login-container, .register-container {
     max-width: 400px;
-        margin: 120px auto 0 auto;
+    margin: 120px auto 0 auto;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 16px rgba(55,65,81,0.10);
@@ -11,6 +10,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .login-container h2, .register-container h2 {
     font-size: 1.5rem;
     font-weight: 600;
@@ -19,10 +19,72 @@ body {
     word-break: break-word;
     letter-spacing: 0.5px;
 }
-    main {
-        padding-top: 70px;
-    }
 
+.login-container label, .register-container label {
+    color: #374151;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.login-container input, .register-container input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-size: 1rem;
+    background: #f9fafb;
+    color: #374151;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.login-container input:focus, .register-container input:focus {
+    border-color: #4b5563;
+    outline: none;
+    background: #fff;
+}
+
+.login-container button, .register-container button {
+    width: 100%;
+    background-color: #4b5563;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+}
+
+.login-container button:hover, .register-container button:hover {
+    background-color: #374151;
+}
+
+.login-container .extra, .register-container .extra {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+.login-container .extra a, .register-container .extra a {
+    color: #4b5563;
+    text-decoration: underline;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+main {
+    padding-top: 70px;
+}
+
+body {
     font-family: 'Segoe UI',
     Tahoma,
     Geneva,
@@ -1839,4 +1901,81 @@ nav ul a:hover {
         gap: 12px;
         text-align: center;
     }
+    
+    .register-container {
+      max-width: 400px;
+      margin: 120px auto 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(55,65,81,0.10);
+      padding: 40px 32px 32px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .register-container h2 {
+      color: #111827;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .register-container label {
+      color: #374151;
+      font-weight: 500;
+      margin-bottom: 8px;
+      display: block;
+      font-size: 1rem;
+    }
+    .register-container input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      margin-bottom: 18px;
+      font-size: 1rem;
+      background: #f9fafb;
+      color: #374151;
+      transition: border-color 0.2s;
+    }
+    .register-container input:focus {
+      border-color: #4b5563;
+      outline: none;
+    }
+    .register-container button {
+      width: 100%;
+      background-color: #4b5563;
+      color: #fff;
+      border: none;
+      padding: 12px 0;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+    .register-container button:hover {
+      background-color: #374151;
+    }
+    .register-container .extra {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #6b7280;
+    }
+    .register-container .extra a {
+      color: #4b5563;
+      text-decoration: underline;
+      font-weight: 500;
+      margin-left: 4px;
+    }
+    @media (max-width: 500px) {
+      .register-container {
+        margin-top: 80px;
+        padding: 24px 8px 24px 8px;
+      }
+    }
+  
+
 }

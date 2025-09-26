@@ -5,82 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registrar usuario | Rentfagelu</title>
   <link rel="stylesheet" href="estilo.css">
-  <style>
-    .register-container {
-      max-width: 400px;
-      margin: 120px auto 0 auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 16px rgba(55,65,81,0.10);
-      padding: 40px 32px 32px 32px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .register-container h2 {
-      color: #111827;
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 24px;
-      text-align: center;
-    }
-    .register-container label {
-      color: #374151;
-      font-weight: 500;
-      margin-bottom: 8px;
-      display: block;
-      font-size: 1rem;
-    }
-    .register-container input {
-      width: 100%;
-      padding: 10px 12px;
-      border: 1px solid #d1d5db;
-      border-radius: 6px;
-      margin-bottom: 18px;
-      font-size: 1rem;
-      background: #f9fafb;
-      color: #374151;
-      transition: border-color 0.2s;
-    }
-    .register-container input:focus {
-      border-color: #4b5563;
-      outline: none;
-    }
-    .register-container button {
-      width: 100%;
-      background-color: #4b5563;
-      color: #fff;
-      border: none;
-      padding: 12px 0;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.2s;
-      margin-top: 8px;
-    }
-    .register-container button:hover {
-      background-color: #374151;
-    }
-    .register-container .extra {
-      margin-top: 18px;
-      text-align: center;
-      font-size: 0.95rem;
-      color: #6b7280;
-    }
-    .register-container .extra a {
-      color: #4b5563;
-      text-decoration: underline;
-      font-weight: 500;
-      margin-left: 4px;
-    }
-    @media (max-width: 500px) {
-      .register-container {
-        margin-top: 80px;
-        padding: 24px 8px 24px 8px;
-      }
-    }
-  </style>
+  
 </head>
 <body>
   <header>
@@ -93,7 +18,16 @@
         <li><a href="propiedades.html">Propiedades</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="carrito.html" class="cart-link">🛒 Carrito <span class="cart-badge">0</span></a></li>
       </ul>
+      <div class="user-actions">
+        <a href="login.html" id="login-link">Iniciar Sesión</a>
+        <a href="registro.html" id="register-link">Registrarse</a>
+        <div id="user-info" style="display: none;">
+          <span id="user-name"></span>
+          <button id="logout-btn">Cerrar Sesión</button>
+        </div>
+      </div>
     </nav>
   </header>
   <div class="register-container">
@@ -126,17 +60,6 @@
       
       <div class="footer-columns">
         <div class="footer-column">
-          <h4>Corredores</h4>
-          <ul>
-            <li><a href="#">Planes de corredores</a></li>
-            <li><a href="#">Usuarios buscando corredores</a></li>
-            <li><a href="#">Solicitar servicios de corredores</a></li>
-            <li><a href="#">Sincronizar cartera externa</a></li>
-            <li><a href="#">Equipo de corredores</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
           <h4>Cuenta</h4>
           <ul>
             <li><a href="login.html">Iniciar sesión</a></li>
@@ -148,27 +71,12 @@
         </div>
 
         <div class="footer-column">
-          <h4>Términos y condiciones</h4>
-          <ul>
-            <li><a href="#">Términos de servicio</a></li>
-            <li><a href="#">Privacidad</a></li>
-            <li><a href="#">Política de cookies</a></li>
-            <li><a href="#">Términos y condiciones</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
           <h4>Contacto</h4>
           <ul>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="mailto:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
-            <li>
-              <div class="social-links">
-                <a href="#" class="social-link">📘</a>
-                <a href="#" class="social-link">📷</a>
-              </div>
-            </li>
+            <li><a href="email:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
+  
           </ul>
         </div>
       </div>
@@ -178,5 +86,9 @@
       <p>&copy; 2025 Rentfagelu. Todos los derechos reservados. | Plataforma de arriendos en Santiago, Chile</p>
     </div>
   </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="auth.js"></script>
+  <script src="cart.js"></script>
 </body>
 </html>
