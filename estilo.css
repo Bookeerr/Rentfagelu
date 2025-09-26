@@ -1958,18 +1958,6 @@ nav ul a:hover {
     .register-container button:hover {
       background-color: #374151;
     }
-    .register-container .extra {
-      margin-top: 18px;
-      text-align: center;
-      font-size: 0.95rem;
-      color: #6b7280;
-    }
-    .register-container .extra a {
-      color: #4b5563;
-      text-decoration: underline;
-      font-weight: 500;
-      margin-left: 4px;
-    }
     @media (max-width: 500px) {
       .register-container {
         margin-top: 80px;
@@ -1977,5 +1965,170 @@ nav ul a:hover {
       }
     }
   
+
+/* Estilos para propiedades con imágenes grandes */
+.properties-container-full {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.properties-content-full {
+    width: 100%;
+}
+
+.properties-container-main-full {
+    width: 100%;
+}
+
+.product-grid-large {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.property-item-large {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    min-height: 280px;
+}
+
+.property-item-large:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.property-image-container-large {
+    flex: 0 0 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.property-image-container-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.property-item-large:hover .property-image-container-large img {
+    transform: scale(1.05);
+}
+
+.property-info-large {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.property-info-large h3 {
+    font-size: 1.4rem;
+    color: #111827;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.property-zone {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.property-features {
+    color: #374151;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.property-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #059669;
+    margin-bottom: 20px;
+}
+
+.property-item-large .btn-comprar {
+    background-color: #059669;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.property-item-large .btn-comprar:hover {
+    background-color: #047857;
+}
+
+.property-item-large.featured .property-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #f59e0b;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* Responsive para propiedades grandes */
+@media (max-width: 768px) {
+    .product-grid-large {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .property-item-large {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .property-image-container-large {
+        flex: none;
+        height: 200px;
+    }
+    
+    .property-info-large {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .properties-container-full {
+        padding: 10px;
+    }
+    
+    .product-grid-large {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .property-image-container-large {
+        height: 180px;
+    }
+    
+    .property-info-large h3 {
+        font-size: 1.2rem;
+    }
+    
+    .property-price {
+        font-size: 1.1rem;
+    }
+}
 
 }
