@@ -40,7 +40,7 @@
 
             <div class="cart-header">
                 <h1>🛒 Carrito de Compras</h1>
-                <p class="cart-subtitle">Gestiona las propiedades que deseas arrendar</p>
+                <p class="cart-subtitle">Gestiona las propiedades que deseas comprar</p>
             </div>
 
             <!-- Contenido del carrito -->
@@ -71,7 +71,7 @@
                             <span id="total-items">0</span>
                         </div>
                         <div class="summary-row total-row">
-                            <span>Total mensual estimado:</span>
+                            <span>Total de la compra:</span>
                             <span id="total-price">$0</span>
                         </div>
                         
@@ -183,18 +183,27 @@
                 const itemElement = createCartItemElement(item, index);
                 cartList.appendChild(itemElement);
                 
-                // Calcular total (asumiendo que el precio está en formato "$X.XXX/mes")
+                // Calcular total (precio de venta completo)
                 const price = parseInt(item.price.replace(/[^\d]/g, ''));
                 total += price;
             });
             
             document.getElementById('total-items').textContent = items.length;
-            document.getElementById('total-price').textContent = `$${total.toLocaleString()}/mes`;
+            document.getElementById('total-price').textContent = `$${total.toLocaleString()}`;
         }
 
         function createCartItemElement(item, index) {
             const div = document.createElement('div');
             div.className = 'cart-item';
+            
+            // Determinar tipo de pago
+            const paymentTypes = {
+                'cash': 'Pago al contado',
+                'credit': 'Crédito hipotecario',
+                'installments': 'Pago en cuotas'
+            };
+            const paymentText = paymentTypes[item.paymentType] || 'Pago al contado';
+            
             div.innerHTML = `
                 <div class="cart-item-image">
                     <div class="placeholder-img">🏠</div>
@@ -202,8 +211,7 @@
                 <div class="cart-item-info">
                     <h4>${item.title || 'Propiedad sin nombre'}</h4>
                     <p class="item-location">📍 ${item.location || 'Ubicación no especificada'}</p>
-                    <p class="item-price">${item.price || '$0/mes'}</p>
-                    <p class="item-duration">Duración: ${item.months || 6} meses</p>
+                    <p class="item-payment">${paymentText}</p>
                 </div>
                 <div class="cart-item-actions">
                     <button onclick="removeCartItem(${index})" class="btn-remove-item">
