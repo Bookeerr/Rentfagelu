@@ -105,6 +105,23 @@
     box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
 }
 
+/* Imágenes específicas para cada propiedad */
+#products-list .img-container {
+    background-image: url(../img/D_NQ_NP_2X_914377-MLC85664600807_062025-F-condominio-quillayes-de-chicureo.webp);
+}
+
+#products-list2 .img-container {
+    background-image: url(../img/D_NQ_NP_2X_777412-MLC87507815933_072025-F-borde-blanco.webp);
+}
+
+#products-list3 .img-container {
+    background-image: url(../img/D_NQ_NP_2X_821086-MLC85362248218_062025-F-alto-polkura.webp);
+}
+
+#products-list4 .img-container {
+    background-image: url(../img/D_NQ_NP_2X_600190-MLC90050130211_082025-F-condominio-quillayes-de-la-dehesa-ii.webp);
+}
+
 .property-card .texto {
     width: 50%;
     max-width: 600px;

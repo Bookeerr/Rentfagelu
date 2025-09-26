@@ -1,0 +1,495 @@
+/* ===== DETALLE-PROPIEDAD.CSS - ESTILOS PARA LA PÁGINA DE DETALLE DE PROPIEDAD ===== */
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.property-detail-main {
+    padding-top: 80px;
+}
+
+.property-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.breadcrumb a {
+    color: #059669;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #047857;
+}
+
+.breadcrumb span {
+    color: #374151;
+    font-weight: 500;
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.property-detail-content {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* ===== SECCIÓN DE IMÁGENES ===== */
+.property-images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-property-image {
+    width: 100%;
+    height: 400px;
+    background: #f3f4f6;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e5e7eb;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.placeholder-x {
+    font-size: 3rem;
+    color: #9ca3af;
+    font-weight: 300;
+}
+
+.property-thumbnails {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 5px 0;
+}
+
+.thumbnail {
+    flex-shrink: 0;
+    width: 80px;
+    height: 60px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    border: 2px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+    border-color: #059669;
+}
+
+.thumbnail .placeholder-x {
+    font-size: 1.5rem;
+    color: #9ca3af;
+}
+
+/* ===== INFORMACIÓN DE LA PROPIEDAD ===== */
+.property-information {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.property-information h1 {
+    font-size: 1.8rem;
+    color: #111827;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.property-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #6b7280;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.location-icon {
+    font-size: 1.2rem;
+}
+
+.property-price {
+    margin-bottom: 25px;
+}
+
+.property-price span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #059669;
+}
+
+/* ===== CARACTERÍSTICAS ===== */
+.property-features {
+    margin-bottom: 25px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.feature-item:last-child {
+    border-bottom: none;
+}
+
+.feature-icon {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.feature-text {
+    color: #374151;
+    font-weight: 500;
+}
+
+/* ===== DESCRIPCIÓN ===== */
+.property-description {
+    margin-bottom: 30px;
+}
+
+.property-description h3 {
+    color: #111827;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.property-description p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* ===== BOTONES DE ACCIÓN ===== */
+.property-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: #059669;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #047857;
+}
+
+.btn-secondary {
+    width: 100%;
+    background-color: transparent;
+    color: #059669;
+    border: 2px solid #059669;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #059669;
+    color: white;
+}
+
+/* ===== INFORMACIÓN ADICIONAL ===== */
+.additional-info {
+    margin-top: 40px;
+}
+
+.info-section {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-section h3 {
+    color: #111827;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #059669;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.amenity-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: #f9fafb;
+    border-radius: 6px;
+}
+
+.amenity-icon {
+    font-size: 1.1rem;
+}
+
+.amenity-text {
+    color: #374151;
+    font-weight: 500;
+}
+
+/* ===== PROPIEDADES RELACIONADAS ===== */
+.related-properties {
+    margin-top: 50px;
+}
+
+.related-properties h2 {
+    color: #111827;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.related-property {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.related-property:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.related-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.related-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.related-property:hover .related-image img {
+    transform: scale(1.05);
+}
+
+.related-image .placeholder-x {
+    font-size: 2rem;
+    color: #9ca3af;
+    font-weight: 300;
+}
+
+.related-info {
+    padding: 20px;
+}
+
+.related-info h4 {
+    color: #111827;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+
+.related-info p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 0 0 8px 0;
+}
+
+.related-price {
+    color: #059669 !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 15px !important;
+}
+
+.btn-see-details {
+    width: 100%;
+    background-color: #059669;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-see-details:hover {
+    background-color: #047857;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .property-detail-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .property-information {
+        position: static;
+    }
+    
+    .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .property-detail-main {
+        padding-top: 60px;
+    }
+    
+    .property-detail-container {
+        padding: 15px;
+    }
+    
+    .main-property-image {
+        height: 250px;
+    }
+    
+    .property-information {
+        padding: 20px;
+    }
+    
+    .property-information h1 {
+        font-size: 1.5rem;
+    }
+    
+    .property-price span {
+        font-size: 1.6rem;
+    }
+    
+    .info-section {
+        padding: 20px;
+    }
+    
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .related-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .related-image {
+        height: 200px;
+    }
+    
+    .related-info {
+        padding: 15px;
+    }
+    
+    .related-properties h2 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .property-detail-container {
+        padding: 10px;
+    }
+    
+    .property-information {
+        padding: 15px;
+    }
+    
+    .main-property-image {
+        height: 200px;
+    }
+    
+    .property-actions {
+        gap: 10px;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+    
+    .related-properties {
+        margin-top: 30px;
+    }
+    
+    .related-image {
+        height: 160px;
+    }
+    
+    .related-info h4 {
+        font-size: 1rem;
+    }
+    
+    .related-price {
+        font-size: 1.1rem !important;
+    }
+}
