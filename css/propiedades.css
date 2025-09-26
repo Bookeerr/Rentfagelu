@@ -1,6 +1,6 @@
-/* ===== PROPIEDADES.CSS - ESTILOS PARA LA PÁGINA DE PROPIEDADES ===== */
+/* PROPIEDADES.CSS - ESTILOS PARA LA PÁGINA DE PROPIEDADES*/
 
-/* ===== CONTENEDOR PRINCIPAL ===== */
+/* CONTENEDOR PRINCIPAL*/
 .properties-main {
     padding-top: 80px;
 }
@@ -15,7 +15,7 @@
     width: 100%;
 }
 
-/* ===== HEADER DE PROPIEDADES ===== */
+/*HEADER DE PROPIEDADES  */
 .properties-header {
     margin-bottom: 30px;
     padding-top: 20px;
@@ -35,7 +35,7 @@
     font-weight: 500;
 }
 
-/* ===== CONTROLES DE PROPIEDADES ===== */
+/*  CONTROLES DE PROPIEDADES  */
 .properties-controls {
     display: flex;
     gap: 20px;
@@ -80,7 +80,7 @@
     color: #374151;
 }
 
-/* ===== GRID DE PROPIEDADES - 3 COLUMNAS ===== */
+/*  GRID DE PROPIEDADES - 3 COLUMNAS  */
 .properties-container-main-full {
     width: 100%;
 }
@@ -106,7 +106,7 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== BADGE DESTACADO ===== */
+/*  BADGE DESTACADO  */
 .property-item-compact.featured .property-badge {
     position: absolute;
     top: 12px;
@@ -120,7 +120,7 @@
     z-index: 2;
 }
 
-/* ===== IMÁGENES DE PROPIEDADES ===== */
+/*  IMÁGENES DE PROPIEDADES  */
 .property-image-container-compact {
     width: 100%;
     height: 220px;
@@ -139,7 +139,7 @@
     transform: scale(1.05);
 }
 
-/* ===== INFORMACIÓN DE PROPIEDADES ===== */
+/*  INFORMACION DE PROPIEDADES */
 .property-info-compact {
     padding: 20px;
 }
@@ -173,7 +173,7 @@
     margin-bottom: 15px;
 }
 
-/* ===== BOTONES ===== */
+/*  BOTONES  */
 .property-item-compact .btn-ver-mas {
     width: 100%;
     background-color: #059669;
