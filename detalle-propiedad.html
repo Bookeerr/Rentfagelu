@@ -104,9 +104,7 @@
                     </div>
 
                     <div class="property-actions">
-                        <div class="quantity-section">
-                        </div>
-                        <button class="btn-add-to-cart" onclick="addPropertyToCart()">
+                        <button class="btn-primary" id="add-to-cart-btn" onclick="addPropertyToCart()">
                             🛒 Agregar al Carrito
                         </button>
                     </div>
@@ -281,24 +279,46 @@
 
         // Agregar propiedad al carrito
         function addPropertyToCart() {
-            const title = document.getElementById('property-title').textContent;
-            const price = document.getElementById('property-price').textContent;
-            const months = document.getElementById('rental-months').value;
+            const urlParams = new URLSearchParams(window.location.search);
+            const propertyId = urlParams.get('id') || 'prop-1';
             
             const property = {
-                id: new URLSearchParams(window.location.search).get('id') || 'generic',
-                title: title,
-                price: price,
-                image: '', // En este caso sería un placeholder
-                location: document.getElementById('property-location').textContent,
-                months: months
+                id: propertyId,
+                title: document.getElementById('property-title').textContent,
+                price: document.getElementById('property-price').textContent,
+                image: '', // Se podría agregar una imagen específica aquí
+                location: document.getElementById('property-location').textContent
             };
             
             // Usar el sistema de carrito existente
-            if (typeof cart !== 'undefined') {
+            if (typeof cart !== 'undefined' && cart.addItem) {
                 cart.addItem(property);
             } else {
-                alert(`${title} agregado al carrito por ${months} mes(es)`);
+                // Fallback en caso de que cart.js no esté cargado
+                alert(`${property.title} agregado al carrito exitosamente!`);
+                
+                // Agregar al localStorage manualmente
+                let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                const existingItem = cartItems.find(item => item.id === property.id);
+                
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cartItems.push({
+                        ...property,
+                        quantity: 1,
+                        addedAt: new Date().toISOString()
+                    });
+                }
+                
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                
+                // Actualizar badge del carrito
+                const cartBadge = document.querySelector('.cart-badge');
+                if (cartBadge) {
+                    const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+                    cartBadge.textContent = totalItems;
+                }
             }
         }
 
