@@ -35,9 +35,10 @@
       <!-- Logo de empresa centrado -->
       <div class="company-logo">
         <div class="logo-placeholder">
-          <div class="logo-icon">🏠</div>
+          <div class="envelope-icon">✉</div>
         </div>
         <h2 class="company-name">RENTFAGELU</h2>
+        <p class="company-subtitle">Tu hogar ideal te espera</p>
       </div>
 
       <!-- Formulario de contacto -->
@@ -50,17 +51,35 @@
           </div>
 
           <div class="form-group">
+            <label for="telefono">TELÉFONO</label>
+            <input type="tel" id="telefono" name="telefono" required>
+          </div>
+
+          <div class="form-group">
             <label for="email">CORREO</label>
             <input type="email" id="email" name="email" required>
           </div>
 
           <div class="form-group">
             <label for="mensaje">CONTENIDO</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
           </div>
 
           <button type="submit" class="submit-btn">ENVIAR MENSAJE</button>
         </form>
+      </div>
+
+      <!-- Información adicional -->
+      <div class="contact-info">
+        <div class="info-section">
+          <h4>Información de Contacto</h4>
+          <div class="contact-details">
+            <p><strong>📧 Email:</strong> contacto@rentfagelu.cl</p>
+            <p><strong>📱 Teléfono:</strong> +56 9 1234 5678</p>
+            <p><strong>📍 Dirección:</strong> Santiago, Chile</p>
+            <p><strong>🕒 Horario:</strong> Lun - Vie: 9:00 - 18:00</p>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -76,12 +95,13 @@
       
       <div class="footer-columns">
         <div class="footer-column">
-          <h4>Propiedades</h4>
+          <h4>Corredores</h4>
           <ul>
-            <li><a href="propiedades.html">Ver todas las propiedades</a></li>
-            <li><a href="#">Casas en arriendo</a></li>
-            <li><a href="#">Departamentos</a></li>
-            <li><a href="#">Propiedades destacadas</a></li>
+            <li><a href="#">Planes de corredores</a></li>
+            <li><a href="#">Usuarios buscando corredores</a></li>
+            <li><a href="#">Solicitar servicios de corredores</a></li>
+            <li><a href="#">Sincronizar cartera externa</a></li>
+            <li><a href="#">Equipo de corredores</a></li>
           </ul>
         </div>
 
@@ -92,6 +112,7 @@
             <li><a href="registro.html">Registrarse</a></li>
             <li><a href="#">¿Olvidó su contraseña?</a></li>
             <li><a href="#">Mi perfil</a></li>
+            <li><a href="carrito.html">Mi carrito</a></li>
           </ul>
         </div>
 
@@ -101,6 +122,7 @@
             <li><a href="#">Términos de servicio</a></li>
             <li><a href="#">Privacidad</a></li>
             <li><a href="#">Política de cookies</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
           </ul>
         </div>
 
@@ -117,10 +139,6 @@
               </div>
             </li>
           </ul>
-        </div>
-
-        <div class="footer-column">
-          <h4>Indicadores</h4>
           <div class="indicators">
             <div class="indicator">
               <span class="indicator-label">UF:</span>

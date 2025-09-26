@@ -17,7 +17,16 @@
         <li><a href="propiedades.html">Propiedades</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="carrito.html" class="cart-link">🛒 Carrito <span class="cart-badge">0</span></a></li>
       </ul>
+      <div class="user-actions">
+        <a href="login.html" id="login-link">Iniciar Sesión</a>
+        <a href="registro.html" id="register-link">Registrarse</a>
+        <div id="user-info" style="display: none;">
+          <span id="user-name"></span>
+          <button id="logout-btn">Cerrar Sesión</button>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -51,12 +60,13 @@
       
       <div class="footer-columns">
         <div class="footer-column">
-          <h4>Propiedades</h4>
+          <h4>Corredores</h4>
           <ul>
-            <li><a href="propiedades.html">Ver todas las propiedades</a></li>
-            <li><a href="#">Casas en arriendo</a></li>
-            <li><a href="#">Departamentos</a></li>
-            <li><a href="#">Propiedades destacadas</a></li>
+            <li><a href="#">Planes de corredores</a></li>
+            <li><a href="#">Usuarios buscando corredores</a></li>
+            <li><a href="#">Solicitar servicios de corredores</a></li>
+            <li><a href="#">Sincronizar cartera externa</a></li>
+            <li><a href="#">Equipo de corredores</a></li>
           </ul>
         </div>
 
@@ -67,6 +77,7 @@
             <li><a href="registro.html">Registrarse</a></li>
             <li><a href="#">¿Olvidó su contraseña?</a></li>
             <li><a href="#">Mi perfil</a></li>
+            <li><a href="carrito.html">Mi carrito</a></li>
           </ul>
         </div>
 
@@ -76,6 +87,7 @@
             <li><a href="#">Términos de servicio</a></li>
             <li><a href="#">Privacidad</a></li>
             <li><a href="#">Política de cookies</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
           </ul>
         </div>
 
@@ -85,6 +97,12 @@
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="mailto:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
+            <li>
+              <div class="social-links">
+                <a href="#" class="social-link">📘</a>
+                <a href="#" class="social-link">📷</a>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -95,6 +113,8 @@
     </div>
   </footer>
 
+  <script src="assets/js/script.js"></script>
   <script src="auth.js"></script>
+  <script src="cart.js"></script>
 </body>
 </html>

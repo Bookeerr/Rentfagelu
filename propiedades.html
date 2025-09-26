@@ -31,55 +31,167 @@
   </header>
 
   <main class="properties-main">
-    <section class="products-list">
-      <h2>Propiedades disponibles</h2>
-      <div class="product-grid">
-        <div class="property-item">
-          <img src="img/D_NQ_NP_2X_914377-MLC85664600807_062025-F-condominio-quillayes-de-chicureo.webp" alt="Casa Chicureo">
-          <div class="property-info">
-            <h3>Casa en Chicureo</h3>
-            <div class="property-zone">Zona Norte</div>
-            <div class="property-features">4 dormitorios · 3 baños · 2 estacionamientos</div>
-            <div class="property-price">$1.200.000 / mes</div>
-            <!-- Ejemplo de botón en cada propiedad -->
-            <button class="btn-comprar" onclick="agregarAlCarrito()">Comprar</button>
+    <div class="properties-container">
+      <div class="properties-content">
+        <div class="properties-header">
+          <h2>Departamentos en arriendo en Santiago encontradas</h2>
+          <p class="properties-count">Propiedades en arriendo encontradas: 1462</p>
+        </div>
+
+        <div class="properties-controls">
+          <div class="sort-controls">
+            <label>Ordenar por:</label>
+            <select>
+              <option>Más relevantes</option>
+              <option>Precio menor a mayor</option>
+              <option>Precio mayor a menor</option>
+              <option>Más recientes</option>
+            </select>
+          </div>
+          
+          <div class="price-currency">
+            <label>Precios en:</label>
+            <select>
+              <option>CLP (Pesos Chilenos)</option>
+              <option>USD (Dólares)</option>
+              <option>UF</option>
+            </select>
+          </div>
+
+          <div class="hide-visited">
+            <label>
+              <input type="checkbox"> Esconder publicaciones visitadas
+            </label>
           </div>
         </div>
-        <div class="property-item">
-          <img src="img/D_NQ_NP_2X_777412-MLC87507815933_072025-F-borde-blanco.webp" alt="Casa Las Condes">
-          <div class="property-info">
-            <h3>Casa en Las Condes</h3>
-            <div class="property-zone">Zona Oriente</div>
-            <div class="property-features">3 dormitorios · 2 baños · 1 estacionamiento</div>
-            <div class="property-price">$950.000 / mes</div>
-            <!-- Ejemplo de botón en cada propiedad -->
-            <button class="btn-comprar" onclick="agregarAlCarrito()">Comprar</button>
+
+        <section class="products-list">
+          <div class="product-grid">
+            <div class="property-item featured">
+              <div class="property-badge">Destacado</div>
+              <img src="img/D_NQ_NP_2X_914377-MLC85664600807_062025-F-condominio-quillayes-de-chicureo.webp" alt="Casa Chicureo">
+              <div class="property-info">
+                <h3>Casa en Chicureo</h3>
+                <div class="property-zone">Zona Norte</div>
+                <div class="property-features">4 dormitorios · 3 baños · 2 estacionamientos</div>
+                <div class="property-price">$1.200.000 / mes</div>
+                <button class="btn-comprar" onclick="agregarAlCarrito()">Comprar</button>
+              </div>
+            </div>
+            <div class="property-item">
+              <img src="img/D_NQ_NP_2X_777412-MLC87507815933_072025-F-borde-blanco.webp" alt="Casa Las Condes">
+              <div class="property-info">
+                <h3>Casa en Las Condes</h3>
+                <div class="property-zone">Zona Oriente</div>
+                <div class="property-features">3 dormitorios · 2 baños · 1 estacionamiento</div>
+                <div class="property-price">$950.000 / mes</div>
+                <button class="btn-comprar" onclick="agregarAlCarrito()">Comprar</button>
+              </div>
+            </div>
+            <div class="property-item">
+              <img src="img/D_NQ_NP_2X_821086-MLC85362248218_062025-F-alto-polkura.webp" alt="Casa Alto Polkura">
+              <div class="property-info">
+                <h3>Casa Alto Polkura</h3>
+                <div class="property-zone">Zona Sur</div>
+                <div class="property-features">5 dormitorios · 4 baños · 2 estacionamientos</div>
+                <div class="property-price">$1.350.000 / mes</div>
+                <button class="btn-comprar" onclick="agregarAlCarrito()">Comprar</button>
+              </div>
+            </div>
+            <div class="property-item">
+              <img src="img/D_NQ_NP_2X_600190-MLC90050130211_082025-F-condominio-quillayes-de-la-dehesa-ii.webp" alt="Casa La Dehesa">
+              <div class="property-info">
+                <h3>Casa La Dehesa</h3>
+                <div class="property-zone">Zona Poniente</div>
+                <div class="property-features">4 dormitorios · 3 baños · 2 estacionamientos</div>
+                <div class="property-price">$1.100.000 / mes</div>
+                <button class="btn-comprar" onclick="agregarAlCarrito()">Comprar</button>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="property-item">
-          <img src="img/D_NQ_NP_2X_821086-MLC85362248218_062025-F-alto-polkura.webp" alt="Casa Alto Polkura">
-          <div class="property-info">
-            <h3>Casa Alto Polkura</h3>
-            <div class="property-zone">Zona Sur</div>
-            <div class="property-features">5 dormitorios · 4 baños · 2 estacionamientos</div>
-            <div class="property-price">$1.350.000 / mes</div>
-            <!-- Ejemplo de botón en cada propiedad -->
-            <button class="btn-comprar" onclick="agregarAlCarrito()">Comprar</button>
-          </div>
-        </div>
-        <div class="property-item">
-          <img src="img/D_NQ_NP_2X_600190-MLC90050130211_082025-F-condominio-quillayes-de-la-dehesa-ii.webp" alt="Casa La Dehesa">
-          <div class="property-info">
-            <h3>Casa La Dehesa</h3>
-            <div class="property-zone">Zona Poniente</div>
-            <div class="property-features">4 dormitorios · 3 baños · 2 estacionamientos</div>
-            <div class="property-price">$1.100.000 / mes</div>
-            <!-- Ejemplo de botón en cada propiedad -->
-            <button class="btn-comprar" onclick="agregarAlCarrito()">Comprar</button>
-          </div>
-        </div>
+        </section>
       </div>
-    </section>
+
+      <!-- Sidebar con búsqueda avanzada -->
+      <aside class="search-sidebar">
+        <div class="search-form-container">
+          <h3>Búsqueda Avanzada</h3>
+          
+          <div class="form-group">
+            <select name="operation-type">
+              <option value="arrendar">Arrendar</option>
+              <option value="comprar">Comprar</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <select name="department">
+              <option value="">Departamento</option>
+              <option value="santiago">Santiago</option>
+              <option value="providencia">Providencia</option>
+              <option value="las-condes">Las Condes</option>
+              <option value="vitacura">Vitacura</option>
+              <option value="nunoa">Ñuñoa</option>
+            </select>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label>
+              <input type="checkbox" name="furnished">
+              Solo Amoblados
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Precio</label>
+            <select name="currency">
+              <option value="CLP">CLP</option>
+              <option value="USD">USD</option>
+              <option value="UF">UF</option>
+            </select>
+          </div>
+
+          <div class="form-group price-range">
+            <input type="text" name="price-from" placeholder="Desde">
+            <input type="text" name="price-to" placeholder="Hasta">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Área (m²)</label>
+            <select name="area">
+              <option value="">0+</option>
+              <option value="50">50+</option>
+              <option value="100">100+</option>
+              <option value="150">150+</option>
+              <option value="200">200+</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Habitaciones</label>
+            <select name="bedrooms">
+              <option value="">0+</option>
+              <option value="1">1+</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+              <option value="4">4+</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Baños</label>
+            <select name="bathrooms">
+              <option value="">0+</option>
+              <option value="1">1+</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+            </select>
+          </div>
+
+          <button type="button" class="btn-filtrar">Filtrar</button>
+        </div>
+      </aside>
+    </div>
   </main>
 
   <footer class="main-footer">
@@ -93,12 +205,13 @@
       
       <div class="footer-columns">
         <div class="footer-column">
-          <h4>Propiedades</h4>
+          <h4>Corredores</h4>
           <ul>
-            <li><a href="propiedades.html">Ver todas las propiedades</a></li>
-            <li><a href="#">Casas en arriendo</a></li>
-            <li><a href="#">Departamentos</a></li>
-            <li><a href="#">Propiedades destacadas</a></li>
+            <li><a href="#">Planes de corredores</a></li>
+            <li><a href="#">Usuarios buscando corredores</a></li>
+            <li><a href="#">Solicitar servicios de corredores</a></li>
+            <li><a href="#">Sincronizar cartera externa</a></li>
+            <li><a href="#">Equipo de corredores</a></li>
           </ul>
         </div>
 
@@ -109,6 +222,7 @@
             <li><a href="registro.html">Registrarse</a></li>
             <li><a href="#">¿Olvidó su contraseña?</a></li>
             <li><a href="#">Mi perfil</a></li>
+            <li><a href="carrito.html">Mi carrito</a></li>
           </ul>
         </div>
 
@@ -118,6 +232,7 @@
             <li><a href="#">Términos de servicio</a></li>
             <li><a href="#">Privacidad</a></li>
             <li><a href="#">Política de cookies</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
           </ul>
         </div>
 
@@ -127,6 +242,12 @@
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="mailto:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
+            <li>
+              <div class="social-links">
+                <a href="#" class="social-link">📘</a>
+                <a href="#" class="social-link">📷</a>
+              </div>
+            </li>
           </ul>
         </div>
       </div>

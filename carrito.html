@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de Propiedad - RentFagelu</title>
+    <title>Carrito de Compras | Rentfagelu</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
@@ -30,168 +30,54 @@
         </nav>
     </header>
 
-    <main class="property-detail-main">
-        <div class="property-detail-container">
+    <main class="cart-main">
+        <div class="cart-container">
             <!-- Navegación breadcrumb -->
             <nav class="breadcrumb">
                 <a href="index.html">Inicio</a> / 
-                <a href="propiedades.html">Propiedades</a> / 
-                <span id="breadcrumb-title">Detalle de Propiedad</span>
+                <span>🛒 Carrito</span>
             </nav>
 
-            <div class="property-detail-content">
-                <!-- Sección de imágenes -->
-                <div class="property-images">
-                    <div class="main-property-image">
-                        <div class="placeholder-x">✕</div>
-                    </div>
-                    <div class="property-thumbnails">
-                        <div class="thumbnail active">
-                            <div class="placeholder-x">✕</div>
-                        </div>
-                        <div class="thumbnail">
-                            <div class="placeholder-x">✕</div>
-                        </div>
-                        <div class="thumbnail">
-                            <div class="placeholder-x">✕</div>
-                        </div>
-                        <div class="thumbnail">
-                            <div class="placeholder-x">✕</div>
-                        </div>
-                        <div class="thumbnail">
-                            <div class="placeholder-x">✕</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Información de la propiedad -->
-                <div class="property-information">
-                    <h1 id="property-title">Nombre de la Propiedad</h1>
-                    <div class="property-location">
-                        <span class="location-icon">📍</span>
-                        <span id="property-location">Ubicación</span>
-                    </div>
-                    
-                    <div class="property-price">
-                        <span id="property-price">$450.000/mes</span>
-                    </div>
-
-                    <div class="property-features">
-                        <div class="feature-item">
-                            <span class="feature-icon">🛏️</span>
-                            <span id="property-bedrooms">3 Habitaciones</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🚿</span>
-                            <span id="property-bathrooms">2 Baños</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">📐</span>
-                            <span id="property-area">120 m²</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🚗</span>
-                            <span id="property-parking">1 Estacionamiento</span>
-                        </div>
-                    </div>
-
-                    <div class="property-description">
-                        <h3>Descripción</h3>
-                        <p id="property-description-text">
-                            Hermosa propiedad con excelentes características y ubicación privilegiada.
-                        </p>
-                    </div>
-
-                    <div class="property-actions">
-                        <div class="quantity-section">
-                            <label for="rental-months">Meses de arriendo:</label>
-                            <select id="rental-months">
-                                <option value="1">1 mes</option>
-                                <option value="3">3 meses</option>
-                                <option value="6" selected>6 meses</option>
-                                <option value="12">12 meses</option>
-                            </select>
-                        </div>
-                        <button class="btn-add-to-cart" onclick="addPropertyToCart()">
-                            🛒 Agregar al Carrito
-                        </button>
-                        <button class="btn-contact-owner">
-                            📞 Contactar Propietario
-                        </button>
-                    </div>
-
-                    <!-- Características adicionales -->
-                    <div class="additional-features">
-                        <h3>Características Adicionales</h3>
-                        <div class="features-grid">
-                            <div class="feature-tag">✓ Seguridad 24/7</div>
-                            <div class="feature-tag">✓ Área Verde</div>
-                            <div class="feature-tag">✓ Piscina</div>
-                            <div class="feature-tag">✓ Gimnasio</div>
-                            <div class="feature-tag">✓ Estacionamiento Visitas</div>
-                            <div class="feature-tag">✓ Sala de Eventos</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="cart-header">
+                <h1>🛒 Carrito de Compras</h1>
+                <p class="cart-subtitle">Gestiona las propiedades que deseas arrendar</p>
             </div>
 
-            <!-- Sección de propiedades relacionadas -->
-            <div class="related-properties">
-                <h2>Propiedades Relacionadas</h2>
-                <div class="related-grid">
-                    <div class="related-property">
-                        <div class="related-image">
-                            <div class="placeholder-x">✕</div>
-                        </div>
-                        <div class="related-info">
-                            <h4>Propiedad Similar 1</h4>
-                            <p>📍 Zona Norte</p>
-                            <p class="related-price">$420.000/mes</p>
-                            <button class="btn-see-details">Ver detalles</button>
-                        </div>
+            <!-- Contenido del carrito -->
+            <div class="cart-content">
+                <!-- Carrito vacío -->
+                <div id="empty-cart" class="empty-cart">
+                    <div class="empty-cart-icon">🛒</div>
+                    <h3>Tu carrito está vacío</h3>
+                    <p>¡Explora nuestras propiedades y encuentra tu hogar ideal!</p>
+                    <a href="propiedades.html" class="btn-browse-properties">Ver Propiedades</a>
+                </div>
+
+                <!-- Lista de items del carrito -->
+                <div id="cart-items" class="cart-items" style="display: none;">
+                    <div class="cart-items-header">
+                        <h3>Propiedades seleccionadas</h3>
+                        <button id="clear-cart" class="btn-clear-cart">Vaciar carrito</button>
                     </div>
-                    <div class="related-property">
-                        <div class="related-image">
-                            <div class="placeholder-x">✕</div>
-                        </div>
-                        <div class="related-info">
-                            <h4>Propiedad Similar 2</h4>
-                            <p>📍 Zona Sur</p>
-                            <p class="related-price">$480.000/mes</p>
-                            <button class="btn-see-details">Ver detalles</button>
-                        </div>
+                    
+                    <div id="cart-list" class="cart-list">
+                        <!-- Los items del carrito se cargarán aquí dinámicamente -->
                     </div>
-                    <div class="related-property">
-                        <div class="related-image">
-                            <div class="placeholder-x">✕</div>
+
+                    <!-- Resumen del carrito -->
+                    <div class="cart-summary">
+                        <div class="summary-row">
+                            <span>Total de propiedades:</span>
+                            <span id="total-items">0</span>
                         </div>
-                        <div class="related-info">
-                            <h4>Propiedad Similar 3</h4>
-                            <p>📍 Zona Oriente</p>
-                            <p class="related-price">$520.000/mes</p>
-                            <button class="btn-see-details">Ver detalles</button>
+                        <div class="summary-row total-row">
+                            <span>Total mensual estimado:</span>
+                            <span id="total-price">$0</span>
                         </div>
-                    </div>
-                    <div class="related-property">
-                        <div class="related-image">
-                            <div class="placeholder-x">✕</div>
-                        </div>
-                        <div class="related-info">
-                            <h4>Propiedad Similar 4</h4>
-                            <p>📍 Zona Poniente</p>
-                            <p class="related-price">$380.000/mes</p>
-                            <button class="btn-see-details">Ver detalles</button>
-                        </div>
-                    </div>
-                    <div class="related-property">
-                        <div class="related-image">
-                            <div class="placeholder-x">✕</div>
-                        </div>
-                        <div class="related-info">
-                            <h4>Propiedad Similar 5</h4>
-                            <p>📍 Centro</p>
-                            <p class="related-price">$350.000/mes</p>
-                            <button class="btn-see-details">Ver detalles</button>
+                        
+                        <div class="cart-actions">
+                            <button id="continue-shopping" class="btn-secondary">Seguir explorando</button>
+                            <button id="proceed-checkout" class="btn-primary">Proceder al contacto</button>
                         </div>
                     </div>
                 </div>
@@ -204,17 +90,19 @@
             <div class="footer-logo">
                 <div class="logo-section">
                     <h3>RENTFAGELU</h3>
-                    <p style="font-style: italic; color: #9ca3af;">Tu hogar ideal te espera</p>
+                    <p>Tu hogar ideal te espera</p>
                 </div>
             </div>
+            
             <div class="footer-columns">
                 <div class="footer-column">
-                    <h4>Propiedades</h4>
+                    <h4>Corredores</h4>
                     <ul>
-                        <li><a href="propiedades.html">Todas las propiedades</a></li>
-                        <li><a href="#">Casas en arriendo</a></li>
-                        <li><a href="#">Departamentos</a></li>
-                        <li><a href="#">Propiedades destacadas</a></li>
+                        <li><a href="#">Planes de corredores</a></li>
+                        <li><a href="#">Usuarios buscando corredores</a></li>
+                        <li><a href="#">Solicitar servicios de corredores</a></li>
+                        <li><a href="#">Sincronizar cartera externa</a></li>
+                        <li><a href="#">Equipo de corredores</a></li>
                     </ul>
                 </div>
 
@@ -225,6 +113,7 @@
                         <li><a href="registro.html">Registrarse</a></li>
                         <li><a href="#">¿Olvidó su contraseña?</a></li>
                         <li><a href="#">Mi perfil</a></li>
+                        <li><a href="carrito.html">Mi carrito</a></li>
                     </ul>
                 </div>
 
@@ -234,6 +123,7 @@
                         <li><a href="#">Términos de servicio</a></li>
                         <li><a href="#">Privacidad</a></li>
                         <li><a href="#">Política de cookies</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
                     </ul>
                 </div>
 
@@ -243,6 +133,12 @@
                         <li><a href="contacto.html">Contacto</a></li>
                         <li><a href="nosotros.html">Nosotros</a></li>
                         <li><a href="mailto:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
+                        <li>
+                            <div class="social-links">
+                                <a href="#" class="social-link">📘</a>
+                                <a href="#" class="social-link">📷</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -257,104 +153,102 @@
     <script src="auth.js"></script>
     <script src="cart.js"></script>
     <script>
-        // Datos de las propiedades (en una aplicación real, esto vendría de una base de datos)
-        const propertyData = {
-            'prop-1': {
-                title: 'Condominio Quillayes de Chicureo',
-                location: 'Chicureo, Santiago',
-                price: '$450.000/mes',
-                bedrooms: '3 Habitaciones',
-                bathrooms: '2 Baños',
-                area: '120 m²',
-                parking: '2 Estacionamientos',
-                description: 'Hermosa casa en condominio cerrado con amplios espacios verdes, seguridad 24/7 y excelente conectividad. Perfecta para familias que buscan tranquilidad sin alejarse de la ciudad. Cuenta con acabados de primera calidad, cocina equipada y acceso a áreas comunes como piscina, quincho y juegos infantiles.'
-            },
-            'prop-2': {
-                title: 'Casa Borde Blanco',
-                location: 'Las Condes, Santiago',
-                price: '$650.000/mes',
-                bedrooms: '4 Habitaciones',
-                bathrooms: '3 Baños',
-                area: '180 m²',
-                parking: '2 Estacionamientos',
-                description: 'Elegante propiedad en sector exclusivo con vista panorámica, jardín privado y acceso a todas las comodidades urbanas. Diseño moderno y acabados de lujo, ideal para ejecutivos y familias que buscan el máximo confort en una ubicación privilegiada.'
-            },
-            'prop-3': {
-                title: 'Alto Polkura',
-                location: 'Providencia, Santiago',
-                price: '$380.000/mes',
-                bedrooms: '2 Habitaciones',
-                bathrooms: '2 Baños',
-                area: '85 m²',
-                parking: '1 Estacionamiento',
-                description: 'Departamento moderno en el corazón de Providencia, cerca del metro y centros comerciales. Ideal para profesionales jóvenes o parejas. Cuenta con balcón, cocina americana y excelente iluminación natural.'
-            },
-            'prop-4': {
-                title: 'Condominio Mirador Piedra Roja',
-                location: 'Colina, Santiago',
-                price: '$520.000/mes',
-                bedrooms: '3 Habitaciones',
-                bathrooms: '2 Baños',
-                area: '140 m²',
-                parking: '2 Estacionamientos',
-                description: 'Casa familiar en condominio con piscina, quincho y áreas verdes. Ambiente tranquilo y seguro para toda la familia con excelente calidad de vida. Incluye acceso a club house, canchas deportivas y áreas de recreación.'
-            }
-        };
-
-        // Cargar información de la propiedad basada en URL params
-        function loadPropertyDetails() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const propertyId = urlParams.get('id');
-            
-            if (propertyId && propertyData[propertyId]) {
-                const property = propertyData[propertyId];
-                
-                document.getElementById('property-title').textContent = property.title;
-                document.getElementById('property-location').textContent = property.location;
-                document.getElementById('property-price').textContent = property.price;
-                document.getElementById('property-bedrooms').textContent = property.bedrooms;
-                document.getElementById('property-bathrooms').textContent = property.bathrooms;
-                document.getElementById('property-area').textContent = property.area;
-                document.getElementById('property-parking').textContent = property.parking;
-                document.getElementById('property-description-text').textContent = property.description;
-                document.getElementById('breadcrumb-title').textContent = property.title;
-                
-                // Actualizar título de la página
-                document.title = `${property.title} - RentFagelu`;
-            } else {
-                // Si no hay ID o no existe la propiedad, mostrar información genérica
-                document.getElementById('property-title').textContent = 'Propiedad No Encontrada';
-                document.getElementById('property-description-text').textContent = 'Lo sentimos, la propiedad que buscas no está disponible.';
-            }
-        }
-
-        // Agregar propiedad al carrito
-        function addPropertyToCart() {
-            const title = document.getElementById('property-title').textContent;
-            const price = document.getElementById('property-price').textContent;
-            const months = document.getElementById('rental-months').value;
-            
-            const property = {
-                id: new URLSearchParams(window.location.search).get('id') || 'generic',
-                title: title,
-                price: price,
-                image: '', // En este caso sería un placeholder
-                location: document.getElementById('property-location').textContent,
-                months: months
-            };
-            
-            // Usar el sistema de carrito existente
-            if (typeof cart !== 'undefined') {
-                cart.addItem(property);
-            } else {
-                alert(`${title} agregado al carrito por ${months} mes(es)`);
-            }
-        }
-
-        // Cargar los detalles al cargar la página
+        // Funcionalidad del carrito de compras
         document.addEventListener('DOMContentLoaded', function() {
-            loadPropertyDetails();
+            loadCartItems();
+            
+            // Event listeners
+            document.getElementById('clear-cart').addEventListener('click', clearCart);
+            document.getElementById('continue-shopping').addEventListener('click', () => {
+                window.location.href = 'propiedades.html';
+            });
+            document.getElementById('proceed-checkout').addEventListener('click', () => {
+                window.location.href = 'contacto.html';
+            });
         });
+
+        function loadCartItems() {
+            // Simulación de items en el carrito (en una aplicación real, esto vendría de localStorage o una API)
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            
+            if (cartItems.length === 0) {
+                showEmptyCart();
+            } else {
+                showCartItems(cartItems);
+            }
+            
+            updateCartBadge(cartItems.length);
+        }
+
+        function showEmptyCart() {
+            document.getElementById('empty-cart').style.display = 'block';
+            document.getElementById('cart-items').style.display = 'none';
+        }
+
+        function showCartItems(items) {
+            document.getElementById('empty-cart').style.display = 'none';
+            document.getElementById('cart-items').style.display = 'block';
+            
+            const cartList = document.getElementById('cart-list');
+            cartList.innerHTML = '';
+            
+            let total = 0;
+            
+            items.forEach((item, index) => {
+                const itemElement = createCartItemElement(item, index);
+                cartList.appendChild(itemElement);
+                
+                // Calcular total (asumiendo que el precio está en formato "$X.XXX/mes")
+                const price = parseInt(item.price.replace(/[^\d]/g, ''));
+                total += price;
+            });
+            
+            document.getElementById('total-items').textContent = items.length;
+            document.getElementById('total-price').textContent = `$${total.toLocaleString()}/mes`;
+        }
+
+        function createCartItemElement(item, index) {
+            const div = document.createElement('div');
+            div.className = 'cart-item';
+            div.innerHTML = `
+                <div class="cart-item-image">
+                    <div class="placeholder-img">🏠</div>
+                </div>
+                <div class="cart-item-info">
+                    <h4>${item.title || 'Propiedad sin nombre'}</h4>
+                    <p class="item-location">📍 ${item.location || 'Ubicación no especificada'}</p>
+                    <p class="item-price">${item.price || '$0/mes'}</p>
+                    <p class="item-duration">Duración: ${item.months || 6} meses</p>
+                </div>
+                <div class="cart-item-actions">
+                    <button onclick="removeCartItem(${index})" class="btn-remove-item">
+                        🗑️ Eliminar
+                    </button>
+                </div>
+            `;
+            return div;
+        }
+
+        function removeCartItem(index) {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            loadCartItems();
+        }
+
+        function clearCart() {
+            if (confirm('¿Estás seguro de que quieres vaciar el carrito?')) {
+                localStorage.removeItem('cartItems');
+                loadCartItems();
+            }
+        }
+
+        function updateCartBadge(count) {
+            const badge = document.querySelector('.cart-badge');
+            if (badge) {
+                badge.textContent = count;
+            }
+        }
     </script>
 </body>
 </html>
