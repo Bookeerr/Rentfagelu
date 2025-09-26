@@ -76,3 +76,4 @@ function logout() {
 function viewPropertyDetails(propertyId) {
     window.location.href = `detalle-propiedad.html?id=${propertyId}`;
 }
+
