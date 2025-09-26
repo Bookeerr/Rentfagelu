@@ -187,10 +187,16 @@
     margin: 4px 0;
 }
 
-.item-payment {
+.item-price {
     color: #059669;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 4px 0;
+}
+
+.item-duration {
+    color: #6b7280;
+    font-size: 0.85rem;
     margin: 4px 0;
 }
 

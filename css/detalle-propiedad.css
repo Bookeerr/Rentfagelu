@@ -77,7 +77,6 @@
     justify-content: center;
     cursor: pointer;
     transition: border-color 0.3s ease;
-    overflow: hidden;
 }
 
 .thumbnail:hover,
@@ -88,12 +87,6 @@
 .thumbnail .placeholder-x {
     font-size: 1.5rem;
     color: #9ca3af;
-}
-
-.thumbnail-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 /* ===== INFORMACIÓN DE LA PROPIEDAD ===== */
@@ -185,78 +178,11 @@
     margin-bottom: 10px;
 }
 
-/* ===== CARACTERÍSTICAS ADICIONALES ===== */
-.additional-features {
-    margin-top: 25px;
-}
-
-.additional-features h3 {
-    color: #111827;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.feature-tag {
-    background: #f0fdf4;
-    color: #059669;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    border: 1px solid #bbf7d0;
-}
-
 /* ===== BOTONES DE ACCIÓN ===== */
 .property-actions {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.rental-duration,
-.payment-options {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.rental-duration label,
-.payment-options label {
-    color: #374151;
-    font-weight: 500;
-    font-size: 0.95rem;
-}
-
-.duration-selector,
-.payment-selector {
-    width: 100%;
-    padding: 12px 15px;
-    border: 2px solid #e5e7eb;
-    border-radius: 8px;
-    font-size: 1rem;
-    color: #374151;
-    background-color: white;
-    transition: border-color 0.3s ease;
-    cursor: pointer;
-}
-
-.duration-selector:hover,
-.payment-selector:hover {
-    border-color: #059669;
-}
-
-.duration-selector:focus,
-.payment-selector:focus {
-    outline: none;
-    border-color: #059669;
-    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+    gap: 12px;
 }
 
 .btn-primary {
@@ -526,18 +452,13 @@
     }
     
     .property-actions {
-        gap: 15px;
+        gap: 10px;
     }
     
     .btn-primary,
     .btn-secondary {
         padding: 12px 15px;
         font-size: 1rem;
-    }
-    
-    .duration-selector {
-        padding: 10px 12px;
-        font-size: 0.95rem;
     }
     
     .related-properties {

@@ -10,21 +10,6 @@ class ShoppingCart {
         const existingItem = this.items.find(item => item.id === property.id);
         
         if (existingItem) {
-            // Si existe, preguntar si quiere actualizar el método de pago
-            if (property.paymentType && property.paymentType !== existingItem.paymentType) {
-                const paymentTypes = {
-                    'cash': 'Pago al contado',
-                    'credit': 'Crédito hipotecario',
-                    'installments': 'Pago en cuotas'
-                };
-                
-                const currentPayment = paymentTypes[existingItem.paymentType] || 'Pago al contado';
-                const newPayment = paymentTypes[property.paymentType] || 'Pago al contado';
-                
-                if (confirm(`Esta propiedad ya está en el carrito con "${currentPayment}". ¿Desea actualizar a "${newPayment}"?`)) {
-                    existingItem.paymentType = property.paymentType;
-                }
-            }
             existingItem.quantity += 1;
         } else {
             this.items.push({
@@ -33,7 +18,6 @@ class ShoppingCart {
                 price: property.price,
                 image: property.image,
                 location: property.location,
-                paymentType: property.paymentType || 'installments',
                 quantity: 1,
                 addedAt: new Date().toISOString()
             });
@@ -227,8 +211,7 @@ function addToCart(button) {
         title: propertyCard.querySelector('h3').textContent,
         price: propertyCard.querySelector('.price').textContent,
         image: imageUrl,
-        location: propertyCard.querySelector('p').textContent,
-        paymentType: 'installments' // Método de pago por defecto
+        location: propertyCard.querySelector('p').textContent
     };
     
     cart.addItem(property);

@@ -37,18 +37,24 @@
             <div class="property-detail-content">
                 <!-- Sección de imágenes -->
                 <div class="property-images">
-                    <div class="main-property-image" id="main-image">
-                        <img src="" alt="Imagen principal de la propiedad" id="main-img">
+                    <div class="main-property-image">
+                        <div class="placeholder-x">✕</div>
                     </div>
-                    <div class="property-thumbnails" id="thumbnails-container">
-                        <div class="thumbnail active" onclick="changeMainImage(this, 0)">
-                            <img src="" alt="Vista principal" class="thumbnail-img">
+                    <div class="property-thumbnails">
+                        <div class="thumbnail active">
+                            <div class="placeholder-x">✕</div>
                         </div>
-                        <div class="thumbnail" onclick="changeMainImage(this, 1)">
-                            <img src="" alt="Interior 1" class="thumbnail-img">
+                        <div class="thumbnail">
+                            <div class="placeholder-x">✕</div>
                         </div>
-                        <div class="thumbnail" onclick="changeMainImage(this, 2)">
-                            <img src="" alt="Interior 2" class="thumbnail-img">
+                        <div class="thumbnail">
+                            <div class="placeholder-x">✕</div>
+                        </div>
+                        <div class="thumbnail">
+                            <div class="placeholder-x">✕</div>
+                        </div>
+                        <div class="thumbnail">
+                            <div class="placeholder-x">✕</div>
                         </div>
                     </div>
                 </div>
@@ -62,7 +68,7 @@
                     </div>
                     
                     <div class="property-price">
-                        <span id="property-price">$950.000.000</span>
+                        <span id="property-price">$450.000.000</span>
                     </div>
 
                     <div class="property-features">
@@ -92,14 +98,6 @@
                     </div>
 
                     <div class="property-actions">
-                        <div class="payment-options">
-                            <label for="payment-type">Forma de pago:</label>
-                            <select id="payment-type" class="payment-selector">
-                                <option value="cash">Pago al contado</option>
-                                <option value="credit">Crédito hipotecario</option>
-                                <option value="installments" selected>Pago en cuotas</option>
-                            </select>
-                        </div>
                         <button class="btn-primary" id="add-to-cart-btn" onclick="addPropertyToCart()">
                             🛒 Agregar al Carrito
                         </button>
@@ -129,9 +127,9 @@
                             <img src="img/D_NQ_NP_2X_777412-MLC87507815933_072025-F-borde-blanco.webp" alt="Casa Las Condes">
                         </div>
                         <div class="related-info">
-                            <h4>Casa Borde Blanco</h4>
+                            <h4>Casa en Las Condes</h4>
                             <p>📍 Zona Oriente</p>
-                            <p class="related-price">$1.350.000.000</p>
+                            <p class="related-price">$50.000.000</p>
                             <button class="btn-see-details" onclick="window.location.href='detalle-propiedad.html?id=prop-2'">Ver +</button>
                         </div>
                     </div>
@@ -140,9 +138,9 @@
                             <img src="img/D_NQ_NP_2X_821086-MLC85362248218_062025-F-alto-polkura.webp" alt="Casa Alto Polkura">
                         </div>
                         <div class="related-info">
-                            <h4>Alto Polkura</h4>
+                            <h4>Casa Alto Polkura</h4>
                             <p>📍 Zona Sur</p>
-                            <p class="related-price">$850.000.000</p>
+                            <p class="related-price">$350.000.000</p>
                             <button class="btn-see-details" onclick="window.location.href='detalle-propiedad.html?id=prop-3'">Ver +</button>
                         </div>
                     </div>
@@ -151,9 +149,9 @@
                             <img src="img/D_NQ_NP_2X_600190-MLC90050130211_082025-F-condominio-quillayes-de-la-dehesa-ii.webp" alt="Casa La Dehesa">
                         </div>
                         <div class="related-info">
-                            <h4>Condominio Mirador Piedra Roja</h4>
+                            <h4>Casa La Dehesa</h4>
                             <p>📍 Zona Poniente</p>
-                            <p class="related-price">$1.100.000.000</p>
+                            <p class="related-price">$17.100.000</p>
                             <button class="btn-see-details" onclick="window.location.href='detalle-propiedad.html?id=prop-4'">Ver +</button>
                         </div>
                     </div>
@@ -207,62 +205,42 @@
             'prop-1': {
                 title: 'Condominio Quillayes de Chicureo',
                 location: 'Chicureo, Santiago',
-                price: '$950.000.000',
+                price: '$450.000.000',
                 bedrooms: '3 Habitaciones',
                 bathrooms: '2 Baños',
                 area: '120 m²',
                 parking: '2 Estacionamientos',
-                description: 'Hermosa casa en condominio cerrado con amplios espacios verdes, seguridad 24/7 y excelente conectividad. Perfecta para familias que buscan tranquilidad sin alejarse de la ciudad. Cuenta con acabados de primera calidad, cocina equipada y acceso a áreas comunes como piscina, quincho y juegos infantiles.',
-                images: [
-                    'img/D_NQ_NP_2X_914377-MLC85664600807_062025-F-condominio-quillayes-de-chicureo.webp',
-                    'img/interior-descarga.jpg',
-                    'img/interior-images.jpg'
-                ]
+                description: 'Hermosa casa en condominio cerrado con amplios espacios verdes, seguridad 24/7 y excelente conectividad. Perfecta para familias que buscan tranquilidad sin alejarse de la ciudad. Cuenta con acabados de primera calidad, cocina equipada y acceso a áreas comunes como piscina, quincho y juegos infantiles.'
             },
             'prop-2': {
                 title: 'Casa Borde Blanco',
                 location: 'Las Condes, Santiago',
-                price: '$1.350.000.000',
+                price: '$650.000.000',
                 bedrooms: '4 Habitaciones',
                 bathrooms: '3 Baños',
                 area: '180 m²',
                 parking: '2 Estacionamientos',
-                description: 'Elegante propiedad en sector exclusivo con vista panorámica, jardín privado y acceso a todas las comodidades urbanas. Diseño moderno y acabados de lujo, ideal para ejecutivos y familias que buscan el máximo confort en una ubicación privilegiada.',
-                images: [
-                    'img/D_NQ_NP_2X_777412-MLC87507815933_072025-F-borde-blanco.webp',
-                    'img/interior-plano-vacio-elementos-decoracion_1303-23910.jpg',
-                    'img/interiorb-images.jpg'
-                ]
+                description: 'Elegante propiedad en sector exclusivo con vista panorámica, jardín privado y acceso a todas las comodidades urbanas. Diseño moderno y acabados de lujo, ideal para ejecutivos y familias que buscan el máximo confort en una ubicación privilegiada.'
             },
             'prop-3': {
                 title: 'Alto Polkura',
                 location: 'Providencia, Santiago',
-                price: '$850.000.000',
+                price: '$380.000.000',
                 bedrooms: '2 Habitaciones',
                 bathrooms: '2 Baños',
                 area: '85 m²',
                 parking: '1 Estacionamiento',
-                description: 'Departamento moderno en el corazón de Providencia, cerca del metro y centros comerciales. Ideal para profesionales jóvenes o parejas. Cuenta con balcón, cocina americana y excelente iluminación natural.',
-                images: [
-                    'img/D_NQ_NP_2X_821086-MLC85362248218_062025-F-alto-polkura.webp',
-                    'img/interiorc-descarga.jpg',
-                    'img/interiorc2-descarga.jpg'
-                ]
+                description: 'Departamento moderno en el corazón de Providencia, cerca del metro y centros comerciales. Ideal para profesionales jóvenes o parejas. Cuenta con balcón, cocina americana y excelente iluminación natural.'
             },
             'prop-4': {
                 title: 'Condominio Mirador Piedra Roja',
                 location: 'Colina, Santiago',
-                price: '$1.100.000.000',
+                price: '$520.000.000',
                 bedrooms: '3 Habitaciones',
                 bathrooms: '2 Baños',
                 area: '140 m²',
                 parking: '2 Estacionamientos',
-                description: 'Casa familiar en condominio con piscina, quincho y áreas verdes. Ambiente tranquilo y seguro para toda la familia con excelente calidad de vida. Incluye acceso a club house, canchas deportivas y áreas de recreación.',
-                images: [
-                    'img/D_NQ_NP_2X_865334-MLC80840345342_122024-F-condominio-mirador-piedra-roja.webp',
-                    'img/interior-images.jpg',
-                    'img/interiorb-images.jpg'
-                ]
+                description: 'Casa familiar en condominio con piscina, quincho y áreas verdes. Ambiente tranquilo y seguro para toda la familia con excelente calidad de vida. Incluye acceso a club house, canchas deportivas y áreas de recreación.'
             }
         };
 
@@ -283,9 +261,6 @@
                 document.getElementById('property-parking').textContent = property.parking;
                 document.getElementById('property-description-text').textContent = property.description;
                 
-                // Cargar imágenes
-                loadPropertyImages(property.images);
-                
                 // Actualizar título de la página
                 document.title = `${property.title} - RentFagelu`;
             } else {
@@ -295,55 +270,17 @@
             }
         }
 
-        // Cargar imágenes de la propiedad
-        function loadPropertyImages(images) {
-            const mainImg = document.getElementById('main-img');
-            const thumbnails = document.querySelectorAll('.thumbnail-img');
-            
-            // Establecer imagen principal
-            mainImg.src = images[0];
-            
-            // Cargar thumbnails
-            thumbnails.forEach((thumbnail, index) => {
-                if (images[index]) {
-                    thumbnail.src = images[index];
-                }
-            });
-        }
-
-        // Cambiar imagen principal
-        function changeMainImage(thumbnailElement, imageIndex) {
-            const urlParams = new URLSearchParams(window.location.search);
-            const propertyId = urlParams.get('id') || 'prop-1';
-            const property = propertyData[propertyId];
-            
-            if (property && property.images[imageIndex]) {
-                const mainImg = document.getElementById('main-img');
-                mainImg.src = property.images[imageIndex];
-                
-                // Remover clase active de todos los thumbnails
-                document.querySelectorAll('.thumbnail').forEach(thumb => {
-                    thumb.classList.remove('active');
-                });
-                
-                // Agregar clase active al thumbnail seleccionado
-                thumbnailElement.classList.add('active');
-            }
-        }
-
         // Agregar propiedad al carrito
         function addPropertyToCart() {
             const urlParams = new URLSearchParams(window.location.search);
             const propertyId = urlParams.get('id') || 'prop-1';
-            const selectedPayment = document.getElementById('payment-type').value;
             
             const property = {
                 id: propertyId,
                 title: document.getElementById('property-title').textContent,
                 price: document.getElementById('property-price').textContent,
                 image: '', // Se podría agregar una imagen específica aquí
-                location: document.getElementById('property-location').textContent,
-                paymentType: selectedPayment
+                location: document.getElementById('property-location').textContent
             };
             
             // Usar el sistema de carrito existente
