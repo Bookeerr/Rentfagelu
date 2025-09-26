@@ -33,13 +33,6 @@
 
     <main class="property-detail-main">
         <div class="property-detail-container">
-            <!-- Navegación breadcrumb -->
-            <nav class="breadcrumb">
-                <a href="index.html">Inicio</a> / 
-                <a href="propiedades.html">Propiedades</a> / 
-                <span id="breadcrumb-title">Detalle de Propiedad</span>
-            </nav>
-
             <div class="property-detail-content">
                 <!-- Sección de imágenes -->
                 <div class="property-images">
@@ -266,7 +259,6 @@
                 document.getElementById('property-area').textContent = property.area;
                 document.getElementById('property-parking').textContent = property.parking;
                 document.getElementById('property-description-text').textContent = property.description;
-                document.getElementById('breadcrumb-title').textContent = property.title;
                 
                 // Actualizar título de la página
                 document.title = `${property.title} - RentFagelu`;

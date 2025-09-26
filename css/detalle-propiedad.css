@@ -1,36 +1,20 @@
 /* ===== DETALLE-PROPIEDAD.CSS - ESTILOS PARA LA PÁGINA DE DETALLE DE PROPIEDAD ===== */
 
+/* ===== RESET DE ELEMENTOS DE DEPURACIÓN ===== */
+*, *::before, *::after {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 /* ===== CONTENEDOR PRINCIPAL ===== */
 .property-detail-main {
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 .property-detail-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-}
-
-/* ===== BREADCRUMB ===== */
-.breadcrumb {
-    margin-bottom: 20px;
-    font-size: 0.9rem;
-    color: #6b7280;
-}
-
-.breadcrumb a {
-    color: #059669;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.breadcrumb a:hover {
-    color: #047857;
-}
-
-.breadcrumb span {
-    color: #374151;
-    font-weight: 500;
 }
 
 /* ===== LAYOUT PRINCIPAL ===== */
