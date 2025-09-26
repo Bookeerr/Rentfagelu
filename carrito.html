@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras | Rentfagelu</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/carrito.css">
 </head>
 <body>
     <header>
@@ -76,9 +77,21 @@
                         
                         <div class="cart-actions">
                             <button id="continue-shopping" class="btn-secondary">Seguir explorando</button>
-                            <button id="proceed-checkout" class="btn-primary">Proceder al contacto</button>
+                            <button id="proceed-payment" class="btn-primary">Pagar</button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de pago exitoso -->
+        <div id="payment-success-modal" class="payment-modal" style="display: none;">
+            <div class="modal-content">
+                <div class="success-icon">✅</div>
+                <h3>¡Pago Realizado Exitosamente!</h3>
+                <p>Tu pago ha sido procesado correctamente. Recibirás un correo de confirmación pronto.</p>
+                <div class="modal-actions">
+                    <button id="close-modal" class="btn-primary">Continuar</button>
                 </div>
             </div>
         </div>
@@ -133,9 +146,10 @@
             document.getElementById('continue-shopping').addEventListener('click', () => {
                 window.location.href = 'propiedades.html';
             });
-            document.getElementById('proceed-checkout').addEventListener('click', () => {
-                window.location.href = 'contacto.html';
-            });
+            document.getElementById('proceed-payment').addEventListener('click', processPayment);
+            
+            // Event listener para cerrar el modal
+            document.getElementById('close-modal').addEventListener('click', closePaymentModal);
         });
 
         function loadCartItems() {
@@ -219,6 +233,53 @@
             if (badge) {
                 badge.textContent = count;
             }
+        }
+
+        function processPayment() {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            
+            if (cartItems.length === 0) {
+                alert('No hay items en el carrito para procesar el pago.');
+                return;
+            }
+
+            // Simular procesamiento de pago (loading)
+            const paymentBtn = document.getElementById('proceed-payment');
+            const originalText = paymentBtn.textContent;
+            paymentBtn.textContent = 'Procesando...';
+            paymentBtn.disabled = true;
+
+            // Simular delay de procesamiento
+            setTimeout(() => {
+                // Restablecer botón
+                paymentBtn.textContent = originalText;
+                paymentBtn.disabled = false;
+                
+                // Mostrar modal de éxito
+                showPaymentSuccessModal();
+                
+                // Limpiar carrito después del pago exitoso
+                localStorage.removeItem('cartItems');
+                
+            }, 2000);
+        }
+
+        function showPaymentSuccessModal() {
+            document.getElementById('payment-success-modal').style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevenir scroll
+        }
+
+        function closePaymentModal() {
+            document.getElementById('payment-success-modal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restaurar scroll
+            
+            // Recargar el carrito para mostrar estado vacío
+            loadCartItems();
+            
+            // Opcional: redirigir a la página principal
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 500);
         }
     </script>
 </body>
