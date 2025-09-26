@@ -1,0 +1,311 @@
+/* ===== MAIN.CSS - ESTILOS BASE PARA TODAS LAS PÁGINAS ===== */
+
+/* Reset y estilos base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fefefe;
+    color: #374151;
+    line-height: 1.4;
+}
+
+main {
+    padding-top: 70px;
+}
+
+/* ===== HEADER Y NAVEGACIÓN ===== */
+header {
+    background-color: #ffffff;
+    padding: 0;
+    border-bottom: 1px solid #e5e7eb;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2000;
+    height: 64px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    color: #111827;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 64px;
+    min-width: 320px;
+    box-sizing: border-box;
+}
+
+nav .logo {
+    margin-right: 36px;
+    flex-shrink: 0;
+}
+
+nav .menu-group {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 8px 18px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+nav ul a:hover {
+    color: #111827;
+    background-color: #f3f4f6;
+}
+
+.cart {
+    margin-left: 0;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-left: 36px;
+    flex-shrink: 0;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 8px 18px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.user-actions a:hover {
+    color: #111827;
+    background-color: #f3f4f6;
+}
+
+/* Carrito badge */
+.cart-badge {
+    background: #ef4444;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+/* ===== FOOTER ===== */
+.main-footer {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    color: #f9fafb;
+    padding: 60px 0 20px 0;
+    margin-top: 80px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.footer-logo .logo-section h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+}
+
+.footer-logo .logo-section p {
+    color: #9ca3af;
+    font-size: 1.1rem;
+    margin: 0;
+    font-style: italic;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-column h4 {
+    color: #f3f4f6;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #059669;
+    display: inline-block;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 4px 0;
+}
+
+.footer-column a:hover {
+    color: #10b981;
+    transform: translateX(5px);
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #374151;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.social-link:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+.footer-bottom {
+    background: #111827;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid #374151;
+}
+
+.footer-bottom p {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-columns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0 20px;
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 64px;
+    }
+    
+    nav ul {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .user-actions {
+        margin-left: 0;
+        gap: 12px;
+    }
+    
+    .footer-content {
+        padding: 0 20px;
+    }
+    
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .footer-bottom p {
+        padding: 0 20px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0 15px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    nav ul a, .user-actions a {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .footer-logo .logo-section h3 {
+        font-size: 1.6rem;
+    }
+    
+    .footer-logo .logo-section p {
+        font-size: 1rem;
+    }
+}
