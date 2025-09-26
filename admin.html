@@ -16,7 +16,7 @@
         <div class="logo-icon">📋</div>
         <h2>Company</h2>
       </div>
-      
+
       <nav class="admin-nav">
         <ul>
           <li class="nav-item active">
@@ -145,37 +145,37 @@
                   <input type="text" id="property-code" name="code" required minlength="3">
                   <span class="error-message" id="code-error"></span>
                 </div>
-                
+
                 <div class="form-group">
                   <label for="property-name">Nombre *</label>
                   <input type="text" id="property-name" name="name" required maxlength="100">
                   <span class="error-message" id="name-error"></span>
                 </div>
-                
+
                 <div class="form-group">
                   <label for="property-description">Descripción</label>
                   <textarea id="property-description" name="description" maxlength="500" rows="3"></textarea>
                   <span class="error-message" id="description-error"></span>
                 </div>
-                
+
                 <div class="form-group">
                   <label for="property-price">Precio *</label>
                   <input type="number" id="property-price" name="price" required min="0" step="0.01">
                   <span class="error-message" id="price-error"></span>
                 </div>
-                
+
                 <div class="form-group">
                   <label for="property-stock">Stock *</label>
                   <input type="number" id="property-stock" name="stock" required min="0" step="1">
                   <span class="error-message" id="stock-error"></span>
                 </div>
-                
+
                 <div class="form-group">
                   <label for="property-critical-stock">Stock Crítico</label>
                   <input type="number" id="property-critical-stock" name="criticalStock" min="0" step="1">
                   <span class="error-message" id="critical-stock-error"></span>
                 </div>
-                
+
                 <div class="form-group">
                   <label for="property-category">Categoría *</label>
                   <select id="property-category" name="category" required>
@@ -187,13 +187,13 @@
                   </select>
                   <span class="error-message" id="category-error"></span>
                 </div>
-                
+
                 <div class="form-group">
                   <label for="property-image">Imagen</label>
                   <input type="file" id="property-image" name="image" accept="image/*">
                   <span class="error-message" id="image-error"></span>
                 </div>
-                
+
                 <div class="form-actions">
                   <button type="submit" class="btn-primary">Guardar</button>
                   <button type="button" onclick="closePropertyForm()" class="btn-secondary">Cancelar</button>
@@ -224,34 +224,35 @@
               <form id="user-form">
                 <div class="form-group">
                   <label for="user-run">RUN *</label>
-                  <input type="text" id="user-run" name="run" required minlength="7" maxlength="9" placeholder="19011022K">
+                  <input type="text" id="user-run" name="run" required minlength="7" maxlength="9"
+                    placeholder="19011022K">
                   <span class="error-message" id="run-error"></span>
                 </div>
-                
+
                 <div class="form-group">
                   <label for="user-name">Nombre *</label>
                   <input type="text" id="user-name" name="name" required maxlength="50">
                   <span class="error-message" id="user-name-error"></span>
                 </div>
-                
+
                 <div class="form-group">
                   <label for="user-lastname">Apellidos *</label>
                   <input type="text" id="user-lastname" name="lastname" required maxlength="100">
                   <span class="error-message" id="lastname-error"></span>
                 </div>
-                
+
                 <div class="form-group">
                   <label for="user-email">Correo *</label>
                   <input type="email" id="user-email" name="email" required maxlength="100">
                   <span class="error-message" id="email-error"></span>
                 </div>
-                
+
                 <div class="form-group">
                   <label for="user-birthdate">Fecha de Nacimiento</label>
                   <input type="date" id="user-birthdate" name="birthdate">
                   <span class="error-message" id="birthdate-error"></span>
                 </div>
-                
+
                 <div class="form-group">
                   <label for="user-type">Tipo de Usuario *</label>
                   <select id="user-type" name="userType" required>
@@ -262,7 +263,7 @@
                   </select>
                   <span class="error-message" id="user-type-error"></span>
                 </div>
-                
+
                 <div class="form-group">
                   <label for="user-region">Región</label>
                   <select id="user-region" name="region" onchange="loadCommunesByRegion()">
@@ -270,7 +271,7 @@
                   </select>
                   <span class="error-message" id="region-error"></span>
                 </div>
-                
+
                 <div class="form-group">
                   <label for="user-commune">Comuna</label>
                   <select id="user-commune" name="commune">
@@ -278,13 +279,13 @@
                   </select>
                   <span class="error-message" id="commune-error"></span>
                 </div>
-                
+
                 <div class="form-group">
                   <label for="user-address">Dirección *</label>
                   <textarea id="user-address" name="address" required maxlength="300" rows="2"></textarea>
                   <span class="error-message" id="address-error"></span>
                 </div>
-                
+
                 <div class="form-actions">
                   <button type="submit" class="btn-primary">Guardar</button>
                   <button type="button" onclick="closeUserForm()" class="btn-secondary">Cancelar</button>

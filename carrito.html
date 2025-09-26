@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras | Rentfagelu</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/carrito.css">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -35,7 +38,7 @@
         <div class="cart-container">
             <!-- Navegación breadcrumb -->
             <nav class="breadcrumb">
-                
+
             </nav>
 
             <div class="cart-header">
@@ -59,7 +62,7 @@
                         <h3>Propiedades seleccionadas</h3>
                         <button id="clear-cart" class="btn-clear-cart">Vaciar carrito</button>
                     </div>
-                    
+
                     <div id="cart-list" class="cart-list">
                         <!-- Los items del carrito se cargarán aquí dinámicamente -->
                     </div>
@@ -74,7 +77,7 @@
                             <span>Total mensual estimado:</span>
                             <span id="total-price">$0</span>
                         </div>
-                        
+
                         <div class="cart-actions">
                             <button id="continue-shopping" class="btn-secondary">Seguir explorando</button>
                             <button id="proceed-payment" class="btn-primary">Pagar</button>
@@ -98,56 +101,56 @@
     </main>
 
     <footer class="main-footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <div class="logo-section">
-          <h3>RENTFAGELU</h3>
-          <p>Tu hogar ideal te espera</p>
-        </div>
-      </div>
-      
-      <div class="footer-columns">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-section">
+                    <h3>RENTFAGELU</h3>
+                    <p>Tu hogar ideal te espera</p>
+                </div>
+            </div>
 
-        <div class="footer-column">
-          <h4>Cuenta</h4>
-          <ul>
-            <li><a href="login.html">Iniciar sesión</a></li>
-            <li><a href="registro.html">Registrarse</a></li>
-            <li><a href="carrito.html">Mi carrito</a></li>
-          </ul>
+            <div class="footer-columns">
+
+                <div class="footer-column">
+                    <h4>Cuenta</h4>
+                    <ul>
+                        <li><a href="login.html">Iniciar sesión</a></li>
+                        <li><a href="registro.html">Registrarse</a></li>
+                        <li><a href="carrito.html">Mi carrito</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="email:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div class="footer-column">
-          <h4>Contacto</h4>
-          <ul>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="email:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
-          </ul>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rentfagelu. Todos los derechos reservados. | Plataforma de arriendos en Santiago, Chile</p>
         </div>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2025 Rentfagelu. Todos los derechos reservados. | Plataforma de arriendos en Santiago, Chile</p>
-    </div>
-  </footer>
+    </footer>
 
     <script src="assets/script.js"></script>
     <script src="assets/auth.js"></script>
     <script src="assets/cart.js"></script>
     <script>
         // Funcionalidad del carrito de compras
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             loadCartItems();
-            
+
             // Event listeners
             document.getElementById('clear-cart').addEventListener('click', clearCart);
             document.getElementById('continue-shopping').addEventListener('click', () => {
                 window.location.href = 'propiedades.html';
             });
             document.getElementById('proceed-payment').addEventListener('click', processPayment);
-            
+
             // Event listener para cerrar el modal
             document.getElementById('close-modal').addEventListener('click', closePaymentModal);
         });
@@ -155,13 +158,13 @@
         function loadCartItems() {
             // Simulación de items en el carrito (en una aplicación real, esto vendría de localStorage o una API)
             const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-            
+
             if (cartItems.length === 0) {
                 showEmptyCart();
             } else {
                 showCartItems(cartItems);
             }
-            
+
             updateCartBadge(cartItems.length);
         }
 
@@ -173,21 +176,21 @@
         function showCartItems(items) {
             document.getElementById('empty-cart').style.display = 'none';
             document.getElementById('cart-items').style.display = 'block';
-            
+
             const cartList = document.getElementById('cart-list');
             cartList.innerHTML = '';
-            
+
             let total = 0;
-            
+
             items.forEach((item, index) => {
                 const itemElement = createCartItemElement(item, index);
                 cartList.appendChild(itemElement);
-                
+
                 // Calcular total (asumiendo que el precio está en formato "$X.XXX/mes")
                 const price = parseInt(item.price.replace(/[^\d]/g, ''));
                 total += price;
             });
-            
+
             document.getElementById('total-items').textContent = items.length;
             document.getElementById('total-price').textContent = `$${total.toLocaleString()}/mes`;
         }
@@ -237,7 +240,7 @@
 
         function processPayment() {
             const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-            
+
             if (cartItems.length === 0) {
                 alert('No hay items en el carrito para procesar el pago.');
                 return;
@@ -254,13 +257,13 @@
                 // Restablecer botón
                 paymentBtn.textContent = originalText;
                 paymentBtn.disabled = false;
-                
+
                 // Mostrar modal de éxito
                 showPaymentSuccessModal();
-                
+
                 // Limpiar carrito después del pago exitoso
                 localStorage.removeItem('cartItems');
-                
+
             }, 2000);
         }
 
@@ -272,10 +275,10 @@
         function closePaymentModal() {
             document.getElementById('payment-success-modal').style.display = 'none';
             document.body.style.overflow = 'auto'; // Restaurar scroll
-            
+
             // Recargar el carrito para mostrar estado vacío
             loadCartItems();
-            
+
             // Opcional: redirigir a la página principal
             setTimeout(() => {
                 window.location.href = 'index.html';
@@ -283,4 +286,5 @@
         }
     </script>
 </body>
+
 </html>
