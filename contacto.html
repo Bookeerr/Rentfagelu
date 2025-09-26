@@ -17,34 +17,131 @@
         <li><a href="propiedades.html">Propiedades</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="carrito.html" class="cart-link">🛒 Carrito <span class="cart-badge">0</span></a></li>
       </ul>
+      <div class="user-actions">
+        <a href="login.html" id="login-link">Iniciar Sesión</a>
+        <a href="registro.html" id="register-link">Registrarse</a>
+        <div id="user-info" style="display: none;">
+          <span id="user-name"></span>
+          <button id="logout-btn">Cerrar Sesión</button>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Contáctanos</h1>
-      <p>¿Tienes dudas o quieres más información? Completa el formulario y te responderemos a la brevedad.</p>
-    </section>
+  <main class="contact-main">
+    <div class="contact-container">
+      <!-- Logo de empresa centrado -->
+      <div class="company-logo">
+        <div class="logo-placeholder">
+          <div class="logo-icon">🏠</div>
+        </div>
+        <h2 class="company-name">RENTFAGELU</h2>
+      </div>
 
-    <section class="contacto-form">
-      <form>
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required>
+      <!-- Formulario de contacto -->
+      <div class="contact-form-wrapper">
+        <h3>FORMULARIO DE CONTACTOS</h3>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="nombre">NOMBRE COMPLETO</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
 
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" required>
+          <div class="form-group">
+            <label for="email">CORREO</label>
+            <input type="email" id="email" name="email" required>
+          </div>
 
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          <div class="form-group">
+            <label for="mensaje">CONTENIDO</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
 
-        <button type="submit">Enviar mensaje</button>
-      </form>
-    </section>
+          <button type="submit" class="submit-btn">ENVIAR MENSAJE</button>
+        </form>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Rentfagelu. Todos los derechos reservados.</p>
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="logo-section">
+          <h3>RENTFAGELU</h3>
+          <p>Tu hogar ideal te espera</p>
+        </div>
+      </div>
+      
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4>Propiedades</h4>
+          <ul>
+            <li><a href="propiedades.html">Ver todas las propiedades</a></li>
+            <li><a href="#">Casas en arriendo</a></li>
+            <li><a href="#">Departamentos</a></li>
+            <li><a href="#">Propiedades destacadas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Cuenta</h4>
+          <ul>
+            <li><a href="login.html">Iniciar sesión</a></li>
+            <li><a href="registro.html">Registrarse</a></li>
+            <li><a href="#">¿Olvidó su contraseña?</a></li>
+            <li><a href="#">Mi perfil</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Términos y condiciones</h4>
+          <ul>
+            <li><a href="#">Términos de servicio</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Política de cookies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="mailto:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
+            <li>
+              <div class="social-links">
+                <a href="#" class="social-link">📘</a>
+                <a href="#" class="social-link">📷</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Indicadores</h4>
+          <div class="indicators">
+            <div class="indicator">
+              <span class="indicator-label">UF:</span>
+              <span class="indicator-value">$ 39.486</span>
+            </div>
+            <div class="indicator">
+              <span class="indicator-label">USD:</span>
+              <span class="indicator-value">$ 953</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Rentfagelu. Todos los derechos reservados. | Plataforma de arriendos en Santiago, Chile</p>
+    </div>
   </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="auth.js"></script>
+  <script src="cart.js"></script>
 </body>
 </html>

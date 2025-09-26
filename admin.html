@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrador - Rentfagelu</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body class="admin-body">
+  <div class="admin-container">
+    <!-- Sidebar del administrador -->
+    <aside class="admin-sidebar">
+      <div class="admin-logo">
+        <div class="logo-icon">📋</div>
+        <h2>Company</h2>
+      </div>
+      
+      <nav class="admin-nav">
+        <ul>
+          <li class="nav-item active">
+            <a href="#dashboard" onclick="showSection('dashboard')">
+              <span class="nav-icon">🏠</span>
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#properties" onclick="showSection('properties')">
+              <span class="nav-icon">🏘️</span>
+              Propiedades
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#users" onclick="showSection('users')">
+              <span class="nav-icon">👥</span>
+              Usuarios
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#reports" onclick="showSection('reports')">
+              <span class="nav-icon">📊</span>
+              Reportes
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#settings" onclick="showSection('settings')">
+              <span class="nav-icon">⚙️</span>
+              Configuración
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="admin-logout">
+        <a href="index.html" onclick="logout()">
+          <span class="nav-icon">🚪</span>
+          Cerrar Sesión
+        </a>
+      </div>
+    </aside>
+
+    <!-- Contenido principal del administrador -->
+    <main class="admin-main">
+      <header class="admin-header">
+        <h1 id="page-title">¡HOLA Administrador!</h1>
+        <div class="admin-user-info">
+          <span id="admin-user-name">Admin User</span>
+          <div class="user-avatar">👤</div>
+        </div>
+      </header>
+
+      <div class="admin-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard-section" class="admin-section active">
+          <div class="dashboard-welcome">
+            <h2>Panel de Control</h2>
+            <p>Bienvenido al sistema de administración de Rentfagelu</p>
+          </div>
+
+          <div class="dashboard-stats">
+            <div class="stat-card">
+              <div class="stat-icon">🏠</div>
+              <div class="stat-info">
+                <h3>Propiedades</h3>
+                <p class="stat-number" id="total-properties">12</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">👥</div>
+              <div class="stat-info">
+                <h3>Usuarios</h3>
+                <p class="stat-number" id="total-users">45</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">💰</div>
+              <div class="stat-info">
+                <h3>Ingresos</h3>
+                <p class="stat-number">$2.450.000</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-actions">
+            <h3>Acciones Rápidas</h3>
+            <div class="quick-actions">
+              <button onclick="showSection('properties')" class="action-btn primary">
+                <span>🏠</span>
+                Nueva Propiedad
+              </button>
+              <button onclick="showSection('users')" class="action-btn secondary">
+                <span>👤</span>
+                Nuevo Usuario
+              </button>
+              <button onclick="showSection('reports')" class="action-btn tertiary">
+                <span>📊</span>
+                Ver Reportes
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Properties Section -->
+        <section id="properties-section" class="admin-section">
+          <div class="section-header">
+            <h2>Gestión de Propiedades</h2>
+            <button onclick="showPropertyForm()" class="btn-primary">+ Nueva Propiedad</button>
+          </div>
+
+          <div id="property-list" class="data-table">
+            <!-- Aquí se cargarán las propiedades -->
+          </div>
+
+          <!-- Formulario para nueva/editar propiedad -->
+          <div id="property-form-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 id="property-form-title">Nueva Propiedad</h3>
+                <span class="close" onclick="closePropertyForm()">&times;</span>
+              </div>
+              <form id="property-form">
+                <div class="form-group">
+                  <label for="property-code">Código Propiedad *</label>
+                  <input type="text" id="property-code" name="code" required minlength="3">
+                  <span class="error-message" id="code-error"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="property-name">Nombre *</label>
+                  <input type="text" id="property-name" name="name" required maxlength="100">
+                  <span class="error-message" id="name-error"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="property-description">Descripción</label>
+                  <textarea id="property-description" name="description" maxlength="500" rows="3"></textarea>
+                  <span class="error-message" id="description-error"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="property-price">Precio *</label>
+                  <input type="number" id="property-price" name="price" required min="0" step="0.01">
+                  <span class="error-message" id="price-error"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="property-stock">Stock *</label>
+                  <input type="number" id="property-stock" name="stock" required min="0" step="1">
+                  <span class="error-message" id="stock-error"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="property-critical-stock">Stock Crítico</label>
+                  <input type="number" id="property-critical-stock" name="criticalStock" min="0" step="1">
+                  <span class="error-message" id="critical-stock-error"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="property-category">Categoría *</label>
+                  <select id="property-category" name="category" required>
+                    <option value="">Seleccionar categoría</option>
+                    <option value="casa">Casa</option>
+                    <option value="departamento">Departamento</option>
+                    <option value="oficina">Oficina</option>
+                    <option value="bodega">Bodega</option>
+                  </select>
+                  <span class="error-message" id="category-error"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="property-image">Imagen</label>
+                  <input type="file" id="property-image" name="image" accept="image/*">
+                  <span class="error-message" id="image-error"></span>
+                </div>
+                
+                <div class="form-actions">
+                  <button type="submit" class="btn-primary">Guardar</button>
+                  <button type="button" onclick="closePropertyForm()" class="btn-secondary">Cancelar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- Users Section -->
+        <section id="users-section" class="admin-section">
+          <div class="section-header">
+            <h2>Gestión de Usuarios</h2>
+            <button onclick="showUserForm()" class="btn-primary">+ Nuevo Usuario</button>
+          </div>
+
+          <div id="user-list" class="data-table">
+            <!-- Aquí se cargarán los usuarios -->
+          </div>
+
+          <!-- Formulario para nuevo/editar usuario -->
+          <div id="user-form-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 id="user-form-title">Nuevo Usuario</h3>
+                <span class="close" onclick="closeUserForm()">&times;</span>
+              </div>
+              <form id="user-form">
+                <div class="form-group">
+                  <label for="user-run">RUN *</label>
+                  <input type="text" id="user-run" name="run" required minlength="7" maxlength="9" placeholder="19011022K">
+                  <span class="error-message" id="run-error"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="user-name">Nombre *</label>
+                  <input type="text" id="user-name" name="name" required maxlength="50">
+                  <span class="error-message" id="user-name-error"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="user-lastname">Apellidos *</label>
+                  <input type="text" id="user-lastname" name="lastname" required maxlength="100">
+                  <span class="error-message" id="lastname-error"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="user-email">Correo *</label>
+                  <input type="email" id="user-email" name="email" required maxlength="100">
+                  <span class="error-message" id="email-error"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="user-birthdate">Fecha de Nacimiento</label>
+                  <input type="date" id="user-birthdate" name="birthdate">
+                  <span class="error-message" id="birthdate-error"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="user-type">Tipo de Usuario *</label>
+                  <select id="user-type" name="userType" required>
+                    <option value="">Seleccionar tipo</option>
+                    <option value="administrador">Administrador</option>
+                    <option value="cliente">Cliente</option>
+                    <option value="vendedor">Vendedor</option>
+                  </select>
+                  <span class="error-message" id="user-type-error"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="user-region">Región</label>
+                  <select id="user-region" name="region" onchange="loadCommunesByRegion()">
+                    <option value="">Seleccionar región</option>
+                  </select>
+                  <span class="error-message" id="region-error"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="user-commune">Comuna</label>
+                  <select id="user-commune" name="commune">
+                    <option value="">Seleccionar comuna</option>
+                  </select>
+                  <span class="error-message" id="commune-error"></span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="user-address">Dirección *</label>
+                  <textarea id="user-address" name="address" required maxlength="300" rows="2"></textarea>
+                  <span class="error-message" id="address-error"></span>
+                </div>
+                
+                <div class="form-actions">
+                  <button type="submit" class="btn-primary">Guardar</button>
+                  <button type="button" onclick="closeUserForm()" class="btn-secondary">Cancelar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- Reports Section -->
+        <section id="reports-section" class="admin-section">
+          <div class="section-header">
+            <h2>Reportes</h2>
+          </div>
+          <p>Sección de reportes en desarrollo...</p>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings-section" class="admin-section">
+          <div class="section-header">
+            <h2>Configuración</h2>
+          </div>
+          <p>Sección de configuración en desarrollo...</p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+  <script src="auth.js"></script>
+</body>
+
+</html>

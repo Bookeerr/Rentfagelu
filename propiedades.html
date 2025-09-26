@@ -17,65 +17,237 @@
         <li><a href="propiedades.html">Propiedades</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="carrito.html" class="cart-link">🛒 Carrito <span class="cart-badge">0</span></a></li>
       </ul>
+      <div class="user-actions">
+        <a href="login.html" id="login-link">Iniciar Sesión</a>
+        <a href="registro.html" id="register-link">Registrarse</a>
+        <div id="user-info" style="display: none;">
+          <span id="user-name"></span>
+          <button id="logout-btn">Cerrar Sesión</button>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Propiedades disponibles</h1>
-      <p>Encuentra la casa ideal para ti en Santiago de Chile. Explora nuestras opciones y conoce todos los detalles.</p>
-    </section>
+  <main class="properties-main">
+    <div class="properties-container">
+      <h1 class="properties-title">PROPIEDADES</h1>
+      
+      <div class="properties-grid">
+        <!-- Fila 1 -->
+        <div class="property-card" data-id="prop-1">
+          <div class="property-image-placeholder">
+            <div class="placeholder-x">✕</div>
+          </div>
+          <div class="property-info">
+            <h3>Condominio Quillayes Chicureo</h3>
+            <p class="property-location">📍 Chicureo, Santiago</p>
+            <p class="property-price">$450.000/mes</p>
+            <button class="btn-details" onclick="viewPropertyDetails('prop-1')">Ver detalles</button>
+          </div>
+        </div>
 
-    <section class="products-list">
-      <h2>Casas en venta</h2>
-      <div class="product-grid">
-        <div class="property-item">
-          <img src="img/D_NQ_NP_2X_914377-MLC85664600807_062025-F-condominio-quillayes-de-chicureo.webp" alt="Casa Chicureo">
+        <div class="property-card" data-id="prop-2">
+          <div class="property-image-placeholder">
+            <div class="placeholder-x">✕</div>
+          </div>
           <div class="property-info">
-            <h3>Casa en Chicureo</h3>
-            <div class="property-zone">Zona Norte</div>
-            <div class="property-features">4 dormitorios · 3 baños · 2 estacionamientos</div>
-            <div class="property-price">$1.200.000 / mes</div>
-            <button class="btn-ver-detalles">Ver detalles</button>
+            <h3>Casa Borde Blanco</h3>
+            <p class="property-location">📍 Las Condes, Santiago</p>
+            <p class="property-price">$650.000/mes</p>
+            <button class="btn-details" onclick="viewPropertyDetails('prop-2')">Ver detalles</button>
           </div>
         </div>
-        <div class="property-item">
-          <img src="img/D_NQ_NP_2X_777412-MLC87507815933_072025-F-borde-blanco.webp" alt="Casa Las Condes">
+
+        <div class="property-card" data-id="prop-3">
+          <div class="property-image-placeholder">
+            <div class="placeholder-x">✕</div>
+          </div>
           <div class="property-info">
-            <h3>Casa en Las Condes</h3>
-            <div class="property-zone">Zona Oriente</div>
-            <div class="property-features">3 dormitorios · 2 baños · 1 estacionamiento</div>
-            <div class="property-price">$950.000 / mes</div>
-            <button class="btn-ver-detalles">Ver detalles</button>
+            <h3>Alto Polkura</h3>
+            <p class="property-location">📍 Providencia, Santiago</p>
+            <p class="property-price">$380.000/mes</p>
+            <button class="btn-details" onclick="viewPropertyDetails('prop-3')">Ver detalles</button>
           </div>
         </div>
-        <div class="property-item">
-          <img src="img/D_NQ_NP_2X_821086-MLC85362248218_062025-F-alto-polkura.webp" alt="Casa Alto Polkura">
+
+        <div class="property-card" data-id="prop-4">
+          <div class="property-image-placeholder">
+            <div class="placeholder-x">✕</div>
+          </div>
           <div class="property-info">
-            <h3>Casa Alto Polkura</h3>
-            <div class="property-zone">Zona Sur</div>
-            <div class="property-features">5 dormitorios · 4 baños · 2 estacionamientos</div>
-            <div class="property-price">$1.350.000 / mes</div>
-            <button class="btn-ver-detalles">Ver detalles</button>
+            <h3>Condominio Mirador Piedra Roja</h3>
+            <p class="property-location">📍 Colina, Santiago</p>
+            <p class="property-price">$520.000/mes</p>
+            <button class="btn-details" onclick="viewPropertyDetails('prop-4')">Ver detalles</button>
           </div>
         </div>
-        <div class="property-item">
-          <img src="img/D_NQ_NP_2X_600190-MLC90050130211_082025-F-condominio-quillayes-de-la-dehesa-ii.webp" alt="Casa La Dehesa">
+
+        <!-- Fila 2 -->
+        <div class="property-card" data-id="prop-5">
+          <div class="property-image-placeholder">
+            <div class="placeholder-x">✕</div>
+          </div>
           <div class="property-info">
-            <h3>Casa La Dehesa</h3>
-            <div class="property-zone">Zona Poniente</div>
-            <div class="property-features">4 dormitorios · 3 baños · 2 estacionamientos</div>
-            <div class="property-price">$1.100.000 / mes</div>
-            <button class="btn-ver-detalles">Ver detalles</button>
+            <h3>Casa en La Reina</h3>
+            <p class="property-location">📍 La Reina, Santiago</p>
+            <p class="property-price">$580.000/mes</p>
+            <button class="btn-details" onclick="viewPropertyDetails('prop-5')">Ver detalles</button>
+          </div>
+        </div>
+
+        <div class="property-card" data-id="prop-6">
+          <div class="property-image-placeholder">
+            <div class="placeholder-x">✕</div>
+          </div>
+          <div class="property-info">
+            <h3>Depto en Ñuñoa</h3>
+            <p class="property-location">📍 Ñuñoa, Santiago</p>
+            <p class="property-price">$320.000/mes</p>
+            <button class="btn-details" onclick="viewPropertyDetails('prop-6')">Ver detalles</button>
+          </div>
+        </div>
+
+        <div class="property-card" data-id="prop-7">
+          <div class="property-image-placeholder">
+            <div class="placeholder-x">✕</div>
+          </div>
+          <div class="property-info">
+            <h3>Casa en Maipú</h3>
+            <p class="property-location">📍 Maipú, Santiago</p>
+            <p class="property-price">$420.000/mes</p>
+            <button class="btn-details" onclick="viewPropertyDetails('prop-7')">Ver detalles</button>
+          </div>
+        </div>
+
+        <div class="property-card" data-id="prop-8">
+          <div class="property-image-placeholder">
+            <div class="placeholder-x">✕</div>
+          </div>
+          <div class="property-info">
+            <h3>Depto en San Miguel</h3>
+            <p class="property-location">📍 San Miguel, Santiago</p>
+            <p class="property-price">$290.000/mes</p>
+            <button class="btn-details" onclick="viewPropertyDetails('prop-8')">Ver detalles</button>
+          </div>
+        </div>
+
+        <!-- Fila 3 -->
+        <div class="property-card" data-id="prop-9">
+          <div class="property-image-placeholder">
+            <div class="placeholder-x">✕</div>
+          </div>
+          <div class="property-info">
+            <h3>Casa en Lo Barnechea</h3>
+            <p class="property-location">📍 Lo Barnechea, Santiago</p>
+            <p class="property-price">$750.000/mes</p>
+            <button class="btn-details" onclick="viewPropertyDetails('prop-9')">Ver detalles</button>
+          </div>
+        </div>
+
+        <div class="property-card" data-id="prop-10">
+          <div class="property-image-placeholder">
+            <div class="placeholder-x">✕</div>
+          </div>
+          <div class="property-info">
+            <h3>Depto en Vitacura</h3>
+            <p class="property-location">📍 Vitacura, Santiago</p>
+            <p class="property-price">$680.000/mes</p>
+            <button class="btn-details" onclick="viewPropertyDetails('prop-10')">Ver detalles</button>
+          </div>
+        </div>
+
+        <div class="property-card" data-id="prop-11">
+          <div class="property-image-placeholder">
+            <div class="placeholder-x">✕</div>
+          </div>
+          <div class="property-info">
+            <h3>Casa en Peñalolén</h3>
+            <p class="property-location">📍 Peñalolén, Santiago</p>
+            <p class="property-price">$480.000/mes</p>
+            <button class="btn-details" onclick="viewPropertyDetails('prop-11')">Ver detalles</button>
+          </div>
+        </div>
+
+        <div class="property-card" data-id="prop-12">
+          <div class="property-image-placeholder">
+            <div class="placeholder-x">✕</div>
+          </div>
+          <div class="property-info">
+            <h3>Depto en Santiago Centro</h3>
+            <p class="property-location">📍 Santiago Centro</p>
+            <p class="property-price">$350.000/mes</p>
+            <button class="btn-details" onclick="viewPropertyDetails('prop-12')">Ver detalles</button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Rentfagelu. Todos los derechos reservados.</p>
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="logo-section">
+          <h3>RENTFAGELU</h3>
+          <p>Tu hogar ideal te espera</p>
+        </div>
+      </div>
+      
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4>Propiedades</h4>
+          <ul>
+            <li><a href="propiedades.html">Ver todas las propiedades</a></li>
+            <li><a href="#">Casas en arriendo</a></li>
+            <li><a href="#">Departamentos</a></li>
+            <li><a href="#">Propiedades destacadas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Cuenta</h4>
+          <ul>
+            <li><a href="login.html">Iniciar sesión</a></li>
+            <li><a href="registro.html">Registrarse</a></li>
+            <li><a href="#">¿Olvidó su contraseña?</a></li>
+            <li><a href="#">Mi perfil</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Términos y condiciones</h4>
+          <ul>
+            <li><a href="#">Términos de servicio</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Política de cookies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="mailto:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Rentfagelu. Todos los derechos reservados. | Plataforma de arriendos en Santiago, Chile</p>
+    </div>
   </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="auth.js"></script>
+  <script src="cart.js"></script>
+  <script>
+    // Función para navegar a la página de detalles
+    function viewPropertyDetails(propertyId) {
+      window.location.href = `detalle-propiedad.html?id=${propertyId}`;
+    }
+  </script>
 </body>
 </html>
