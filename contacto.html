@@ -3,123 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto | Rentfagelu</title>
+  <title>Contacto - Rentfagelu</title>
   <link rel="stylesheet" href="css/estilo.css">
 </head>
+
 <body>
+  <!-- ENCABEZADO Y NAVEGACIÓN -->
   <header>
     <nav>
       <div class="logo">
         <a href="index.html">Rentfagelu</a>
       </div>
-      <ul>
+      
+      <ul class="menu-navegacion">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="propiedades.html">Propiedades</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="carrito.html" class="cart-link">🛒 Carrito <span class="cart-badge">0</span></a></li>
       </ul>
-      <div class="user-actions">
-        <a href="login.html" id="login-link">Iniciar Sesión</a>
-        <a href="registro.html" id="register-link">Registrarse</a>
-        <div id="user-info" style="display: none;">
-          <span id="user-name"></span>
-          <button id="logout-btn">Cerrar Sesión</button>
+      
+      <div class="acciones-usuario">
+        <a href="login.html" id="enlace-login">Iniciar Sesión</a>
+        <a href="registro.html" id="enlace-registro">Registrarse</a>
+        <div id="info-usuario" style="display: none;">
+          <span id="nombre-usuario"></span>
+          <a href="admin.html" id="enlace-admin" style="display: none;">Panel Admin</a>
+          <button id="boton-cerrar-sesion">Cerrar Sesión</button>
         </div>
       </div>
     </nav>
   </header>
 
-  <main class="contact-main">
-    <div class="contact-container">
-      <!-- Logo de empresa centrado -->
-      <div class="company-logo">
-        <div class="logo-placeholder">
-          <div class="envelope-icon">✉</div>
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <!-- SECCIÓN HERO CONTACTO -->
+    <section class="seccion-hero-contacto">
+      <div class="contenido-hero-contacto">
+        <h1 class="titulo-contacto">Contáctanos</h1>
+        <p class="descripcion-contacto">Estamos aquí para ayudarte a encontrar tu hogar ideal en Santiago</p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN FORMULARIO DE CONTACTO -->
+    <section class="seccion-formulario-contacto">
+      <div class="contenedor-principal">
+        <div class="contenido-contacto">
+          
+          <!-- INFORMACIÓN DE CONTACTO -->
+          <div class="informacion-contacto">
+            <h2 class="titulo-seccion">Información de Contacto</h2>
+            <div class="detalles-contacto">
+              <div class="detalle-item">
+                <h4>Correo Electrónico</h4>
+                <p>contacto@rentfagelu.cl</p>
+              </div>
+              <div class="detalle-item">
+                <h4>Teléfono</h4>
+                <p>+56 9 1234 5678</p>
+              </div>
+              <div class="detalle-item">
+                <h4>Horarios de Atención</h4>
+                <p>Lunes a Viernes: 9:00 - 18:00</p>
+                <p>Sábados: 10:00 - 14:00</p>
+              </div>
+              <div class="detalle-item">
+                <h4>Ubicación</h4>
+                <p>Santiago, Región Metropolitana</p>
+                <p>Chile</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORMULARIO -->
+          <div class="contenedor-formulario">
+            <h2 class="titulo-seccion">Envíanos un Mensaje</h2>
+            
+            <!-- MENSAJE DE CONFIRMACIÓN -->
+            <div id="mensaje-confirmacion" class="mensaje-confirmacion" style="display: none;">
+              <p>¡Mensaje enviado exitosamente! Te contactaremos pronto.</p>
+            </div>
+
+            <form id="formulario-contacto" class="formulario-contacto">
+              <div class="grupo-formulario">
+                <label for="nombre" class="etiqueta-formulario">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" class="campo-formulario" required>
+              </div>
+
+              <div class="grupo-formulario">
+                <label for="telefono" class="etiqueta-formulario">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" class="campo-formulario" required>
+              </div>
+
+              <div class="grupo-formulario">
+                <label for="email" class="etiqueta-formulario">Correo Electrónico</label>
+                <input type="email" id="email" name="email" class="campo-formulario" required>
+              </div>
+
+              <div class="grupo-formulario">
+                <label for="asunto" class="etiqueta-formulario">Asunto</label>
+                <select id="asunto" name="asunto" class="campo-formulario" required>
+                  <option value="">Selecciona un asunto</option>
+                  <option value="compra">Consulta sobre compra</option>
+                  <option value="venta">Consulta sobre venta</option>
+                  <option value="arriendo">Consulta sobre arriendo</option>
+                  <option value="informacion">Solicitud de información</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+
+              <div class="grupo-formulario">
+                <label for="mensaje" class="etiqueta-formulario">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="6" class="campo-formulario" required placeholder="Escribe tu mensaje aquí..."></textarea>
+              </div>
+
+              <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+            </form>
+          </div>
+
         </div>
-        <h2 class="company-name">RENTFAGELU</h2>
-        <p class="company-subtitle">Tu hogar ideal te espera</p>
       </div>
-
-      <!-- Formulario de contacto -->
-      <div class="contact-form-wrapper">
-        <h3>FORMULARIO DE CONTACTOS</h3>
-        <form id="contact-form" class="contact-form">
-          <div class="form-group">
-            <label for="nombre">NOMBRE COMPLETO</label>
-            <input type="text" id="nombre" name="nombre" required>
-          </div>
-
-          <div class="form-group">
-            <label for="telefono">TELÉFONO</label>
-            <input type="tel" id="telefono" name="telefono" required>
-          </div>
-
-          <div class="form-group">
-            <label for="email">CORREO</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-
-          <div class="form-group">
-            <label for="mensaje">CONTENIDO</label>
-            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
-          </div>
-
-          <button type="submit" class="submit-btn">ENVIAR MENSAJE</button>
-        </form>
-      </div>
-
-      <!-- Información adicional -->
-      <div class="contact-info">
-        <div class="info-section">
-          <h4>Información de Contacto</h4>
-          <div class="contact-details">
-            <p><strong>Email:</strong> contacto@rentfagelu.cl</p>
-            <p><strong>Teléfono:</strong> +56 9 1234 5678</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   </main>
 
-  <footer class="main-footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <div class="logo-section">
-          <h3>RENTFAGELU</h3>
-          <p>Tu hogar ideal te espera</p>
-        </div>
+  <!-- PIE DE PÁGINA -->
+  <footer class="pie-pagina">
+    <div class="contenido-footer">
+      <div class="seccion-logo-footer">
+        <h3>RENTFAGELU</h3>
+        <p>Tu hogar ideal te espera</p>
       </div>
-      
-      <div class="footer-columns">
 
-        <div class="footer-column">
+      <div class="columnas-footer">
+        <div class="columna-footer">
           <h4>Cuenta</h4>
           <ul>
             <li><a href="login.html">Iniciar sesión</a></li>
             <li><a href="registro.html">Registrarse</a></li>
-            <li><a href="carrito.html">Mi carrito</a></li>
           </ul>
         </div>
 
-        <div class="footer-column">
+        <div class="columna-footer">
           <h4>Contacto</h4>
           <ul>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="email:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
+            <li><a href="mailto:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
           </ul>
         </div>
       </div>
     </div>
-    
-    <div class="footer-bottom">
+
+    <div class="fondo-footer">
       <p>&copy; 2025 Rentfagelu. Todos los derechos reservados. | Plataforma de arriendos en Santiago, Chile</p>
     </div>
   </footer>
 
-  <script src="assets/script.js"></script>
-  <script src="assets/auth.js"></script>
-  <script src="assets/cart.js"></script>
+  <!-- SCRIPTS -->
+  <script src="assets/principal.js"></script>
+  <script src="assets/autenticacion.js"></script>
+  <script src="assets/contacto.js"></script>
 </body>
 </html>

@@ -13,39 +13,33 @@
     <!-- Sidebar del administrador -->
     <aside class="admin-sidebar">
       <div class="admin-logo">
-        <div class="logo-icon">📋</div>
-        <h2>Company</h2>
+        <h2>RentFagelu Admin</h2>
       </div>
       
       <nav class="admin-nav">
         <ul>
           <li class="nav-item active">
             <a href="#dashboard" onclick="showSection('dashboard')">
-              <span class="nav-icon">🏠</span>
               Dashboard
             </a>
           </li>
           <li class="nav-item">
             <a href="#properties" onclick="showSection('properties')">
-              <span class="nav-icon">🏘️</span>
               Propiedades
             </a>
           </li>
           <li class="nav-item">
             <a href="#users" onclick="showSection('users')">
-              <span class="nav-icon">👥</span>
               Usuarios
             </a>
           </li>
           <li class="nav-item">
             <a href="#reports" onclick="showSection('reports')">
-              <span class="nav-icon">📊</span>
               Reportes
             </a>
           </li>
           <li class="nav-item">
             <a href="#settings" onclick="showSection('settings')">
-              <span class="nav-icon">⚙️</span>
               Configuración
             </a>
           </li>
@@ -53,8 +47,7 @@
       </nav>
 
       <div class="admin-logout">
-        <a href="index.html" onclick="logout()">
-          <span class="nav-icon">🚪</span>
+        <a href="index.html" onclick="cerrarSesionAdmin()">
           Cerrar Sesión
         </a>
       </div>
@@ -99,24 +92,6 @@
                 <h3>Ingresos</h3>
                 <p class="stat-number">$2.450.000</p>
               </div>
-            </div>
-          </div>
-
-          <div class="dashboard-actions">
-            <h3>Acciones Rápidas</h3>
-            <div class="quick-actions">
-              <button onclick="showSection('properties')" class="action-btn primary">
-                <span>🏠</span>
-                Nueva Propiedad
-              </button>
-              <button onclick="showSection('users')" class="action-btn secondary">
-                <span>👤</span>
-                Nuevo Usuario
-              </button>
-              <button onclick="showSection('reports')" class="action-btn tertiary">
-                <span>📊</span>
-                Ver Reportes
-              </button>
             </div>
           </div>
         </section>
@@ -313,8 +288,8 @@
     </main>
   </div>
 
-  <script src="admin.js"></script>
-  <script src="assets/auth.js"></script>
+  <script src="assets/administracion.js"></script>
+  <script src="assets/autenticacion.js"></script>
 </body>
 
 </html>

@@ -1,158 +1,152 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rentfagelu</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/index.css">
+  <title>Rentfagelu - Compra y venta de Casas en Santiago</title>
+  <link rel="stylesheet" href="css/estilo.css">
 </head>
 
 <body>
+  <!-- ENCABEZADO Y NAVEGACIÓN -->
   <header>
     <nav>
       <div class="logo">
         <a href="index.html">Rentfagelu</a>
       </div>
-      <ul>
+      
+      <ul class="menu-navegacion">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="propiedades.html">Propiedades</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="carrito.html" class="cart-link">🛒 Carrito <span class="cart-badge">0</span></a></li>
+        <li><a href="carrito.html" class="enlace-carrito"> Carrito <span class="contador-carrito">0</span></a></li>
       </ul>
-      <div class="user-actions">
-        <a href="login.html" id="login-link">Iniciar Sesión</a>
-        <a href="registro.html" id="register-link">Registrarse</a>
-        <div id="user-info" style="display: none;">
-          <span id="user-name"></span>
-          <a href="admin.html" id="admin-link" style="display: none; margin-right: 10px;">Admin Panel</a>
-          <button id="logout-btn">Cerrar Sesión</button>
+      
+      <div class="acciones-usuario">
+        <a href="login.html" id="enlace-login">Iniciar Sesión</a>
+        <a href="registro.html" id="enlace-registro">Registrarse</a>
+        <div id="info-usuario" style="display: none;">
+          <span id="nombre-usuario"></span>
+          <a href="admin.html" id="enlace-admin" style="display: none;">Panel Admin</a>
+          <button id="boton-cerrar-sesion">Cerrar Sesión</button>
         </div>
       </div>
     </nav>
   </header>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <main>
-    <section class="hero">
-      <h1>RENTFAGELU</h1>
-      <p>Arriendo de casas en Santiago de Chile. Encuentra tu hogar ideal de forma rápida y segura.</p>
-      <a href="propiedades.html"><button>Ver propiedades</button></a>
+    <!-- SECCIÓN HERO -->
+    <section class="seccion-hero">
+      <div class="contenido-hero">
+        <h1>RENTFAGELU</h1>
+        <p>compra y venta de casas en Santiago de Chile. Encuentra tu hogar ideal de forma rápida y segura.</p>
+        <a href="propiedades.html" class="boton-ver-propiedades">Ver Propiedades</a>
+      </div>
     </section>
 
-    <div class="main-content">
-      <div class="properties-container">
-        <div class="content-area">
-          <h2 class="titulo-casas"
-            style="margin-top:40px; margin-bottom:32px; font-size:2.2rem; color:#111827; font-weight:600; text-align:center;">
-            Casas Disponibles</h2>
-
-          <section id="products-list">
-            <div class="container property-card" data-id="property-1">
-              <div class="img-container">
+    <!-- SECCIÓN CASAS DESTACADAS -->
+    <section class="seccion-casas-destacadas">
+      <div class="contenedor-principal">
+        <h2 class="titulo-seccion">Casas Disponibles</h2>
+        
+        <!-- LISTA DE PROPIEDADES -->
+        <div class="lista-propiedades">
+          
+          <!-- PROPIEDAD 1 -->
+          <article class="tarjeta-propiedad" data-id="propiedad-1">
+            <img src="img/D_NQ_NP_2X_914377-MLC85664600807_062025-F-condominio-quillayes-de-chicureo.webp" alt="Condominio Quillayes de Chicureo" class="imagen-propiedad">
+            <div class="informacion-propiedad">
+              <h3 class="nombre-propiedad">Condominio Quillayes de Chicureo</h3>
+              <p class="ubicacion-propiedad">Chicureo, Santiago</p>
+              <span class="etiqueta-reciente">Agregado recientemente</span>
+              <div class="precio-propiedad">$950.000.000</div>
+              <div class="caracteristicas-propiedad">
+                <span class="caracteristica"> 3 Habitaciones</span>
+                <span class="caracteristica"> 2 Baños</span>
+                <span class="caracteristica"> 120 m²</span>
               </div>
-              <div class="texto">
-                <h3>Condominio Quillayes de Chicureo</h3>
-                <p>📍 Chicureo, Santiago</p>
-                <span class="recently-added">Agregado recientemente</span>
-                <div class="price">$950.000.000</div>
-                <div class="property-features">
-                  <span class="feature">🛏️ 3 Habitaciones</span>
-                  <span class="feature">🚿 2 Baños</span>
-                  <span class="feature">📐 120 m²</span>
-                </div>
-                <p class="property-description">Hermosa casa en condominio cerrado con amplios espacios verdes,
-                  seguridad 24/7 y excelente conectividad.</p>
-                <div class="property-actions">
-                  <button class="btn-comprar">Comprar</button>
-                </div>
+              <p class="descripcion-propiedad">Hermosa casa en condominio cerrado con amplios espacios verdes, seguridad 24/7 y excelente conectividad.</p>
+              <div class="acciones-propiedad">
+                <button class="boton-comprar">Comprar</button>
               </div>
             </div>
-          </section>
+          </article>
 
-          <section id="products-list2">
-            <div class="container property-card" data-id="property-2">
-              <div class="img-container">
+          <!-- PROPIEDAD 2 -->
+          <article class="tarjeta-propiedad" data-id="propiedad-2">
+            <img src="img/D_NQ_NP_2X_777412-MLC87507815933_072025-F-borde-blanco.webp" alt="Casa Borde Blanco" class="imagen-propiedad">
+            <div class="informacion-propiedad">
+              <h3 class="nombre-propiedad">Casa Borde Blanco</h3>
+              <p class="ubicacion-propiedad">Las Condes, Santiago</p>
+              <div class="precio-propiedad">$1.350.000.000</div>
+              <div class="caracteristicas-propiedad">
+                <span class="caracteristica"> 4 Habitaciones</span>
+                <span class="caracteristica"> 3 Baños</span>
+                <span class="caracteristica"> 180 m²</span>
               </div>
-              <div class="texto">
-                <h3>Casa Borde Blanco</h3>
-                <p>📍 Las Condes, Santiago</p>
-                <div class="price">$1.350.000.000</div>
-                <div class="property-features">
-                  <span class="feature">🛏️ 4 Habitaciones</span>
-                  <span class="feature">🚿 3 Baños</span>
-                  <span class="feature">📐 180 m²</span>
-                </div>
-                <p class="property-description">Elegante propiedad en sector exclusivo con vista panorámica, jardín
-                  privado y acceso a todas las comodidades urbanas.</p>
-                <div class="property-actions">
-                  <button class="btn-comprar">Comprar</button>
-                </div>
+              <p class="descripcion-propiedad">Elegante propiedad en sector exclusivo con vista panorámica, jardín privado y acceso a todas las comodidades urbanas.</p>
+              <div class="acciones-propiedad">
+                <button class="boton-comprar">Comprar</button>
               </div>
             </div>
-          </section>
+          </article>
 
-          <section id="products-list3">
-            <div class="container property-card" data-id="property-3">
-              <div class="img-container">
+          <!-- PROPIEDAD 3 -->
+          <article class="tarjeta-propiedad" data-id="propiedad-3">
+            <img src="img/D_NQ_NP_2X_821086-MLC85362248218_062025-F-alto-polkura.webp" alt="Alto Polkura" class="imagen-propiedad">
+            <div class="informacion-propiedad">
+              <h3 class="nombre-propiedad">Alto Polkura</h3>
+              <p class="ubicacion-propiedad">Providencia, Santiago</p>
+              <span class="etiqueta-reciente">Agregado recientemente</span>
+              <div class="precio-propiedad">$850.000.000</div>
+              <div class="caracteristicas-propiedad">
+                <span class="caracteristica"> 2 Habitaciones</span>
+                <span class="caracteristica"> 2 Baños</span>
+                <span class="caracteristica"> 85 m²</span>
               </div>
-              <div class="texto">
-                <h3>Alto Polkura</h3>
-                <p>📍 Providencia, Santiago</p>
-                <span class="recently-added">Agregado recientemente</span>
-                <div class="price">$850.000.000</div>
-                <div class="property-features">
-                  <span class="feature">🛏️ 2 Habitaciones</span>
-                  <span class="feature">🚿 2 Baños</span>
-                  <span class="feature">📐 85 m²</span>
-                </div>
-                <p class="property-description">Departamento moderno en el corazón de Providencia, cerca del metro y
-                  centros comerciales. Ideal para profesionales.</p>
-                <div class="property-actions">
-                  <button class="btn-comprar">Comprar</button>
-                </div>
+              <p class="descripcion-propiedad">Departamento moderno en el corazón de Providencia, cerca del metro y centros comerciales. Ideal para profesionales.</p>
+              <div class="acciones-propiedad">
+                <button class="boton-comprar">Comprar</button>
               </div>
             </div>
-          </section>
+          </article>
 
-          <section id="products-list4">
-            <div class="container property-card" data-id="property-4">
-              <div class="img-container">
+          <!-- PROPIEDAD 4 -->
+          <article class="tarjeta-propiedad" data-id="propiedad-4">
+            <img src="img/D_NQ_NP_2X_865334-MLC80840345342_122024-F-condominio-mirador-piedra-roja.webp" alt="Condominio Mirador Piedra Roja" class="imagen-propiedad">
+            <div class="informacion-propiedad">
+              <h3 class="nombre-propiedad">Condominio Mirador Piedra Roja</h3>
+              <p class="ubicacion-propiedad">Colina, Santiago</p>
+              <div class="precio-propiedad">$1.100.000.000</div>
+              <div class="caracteristicas-propiedad">
+                <span class="caracteristica"> 3 Habitaciones</span>
+                <span class="caracteristica"> 2 Baños</span>
+                <span class="caracteristica"> 140 m²</span>
               </div>
-              <div class="texto">
-                <h3>Condominio Mirador Piedra Roja</h3>
-                <p>📍 Colina, Santiago</p>
-                <div class="price">$1.100.000.000</div>
-                <div class="property-features">
-                  <span class="feature">🛏️ 3 Habitaciones</span>
-                  <span class="feature">🚿 2 Baños</span>
-                  <span class="feature">📐 140 m²</span>
-                </div>
-                <p class="property-description">Casa familiar en condominio con piscina, quincho y áreas verdes.
-                  Ambiente tranquilo y seguro para toda la familia.</p>
-                <div class="property-actions">
-                  <button class="btn-comprar">Comprar</button>
-                </div>
+              <p class="descripcion-propiedad">Casa familiar en condominio con piscina, quincho y áreas verdes. Ambiente tranquilo y seguro para toda la familia.</p>
+              <div class="acciones-propiedad">
+                <button class="boton-comprar">Comprar</button>
               </div>
             </div>
-          </section>
-        </div>
-
-
-  </main>
-  <footer class="main-footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <div class="logo-section">
-          <h3>RENTFAGELU</h3>
-          <p>Tu hogar ideal te espera</p>
+          </article>
+          
         </div>
       </div>
+    </section>
+  </main>
 
-      <div class="footer-columns">
+  <!-- PIE DE PÁGINA -->
+  <footer class="pie-pagina">
+    <div class="contenido-footer">
+      <div class="seccion-logo-footer">
+        <h3>RENTFAGELU</h3>
+        <p>Tu hogar ideal te espera</p>
+      </div>
 
-        <div class="footer-column">
+      <div class="columnas-footer">
+        <div class="columna-footer">
           <h4>Cuenta</h4>
           <ul>
             <li><a href="login.html">Iniciar sesión</a></li>
@@ -161,25 +155,25 @@
           </ul>
         </div>
 
-        <div class="footer-column">
+        <div class="columna-footer">
           <h4>Contacto</h4>
           <ul>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="email:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
+            <li><a href="mailto:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="footer-bottom">
+    <div class="fondo-footer">
       <p>&copy; 2025 Rentfagelu. Todos los derechos reservados. | Plataforma de arriendos en Santiago, Chile</p>
     </div>
   </footer>
 
-  <script src="assets/script.js"></script>
-  <script src="assets/auth.js"></script>
-  <script src="assets/cart.js"></script>
+  <!-- SCRIPTS -->
+  <script src="assets/principal.js"></script>
+  <script src="assets/autenticacion.js"></script>
+  <script src="assets/carrito.js"></script>
 </body>
-
 </html>
