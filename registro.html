@@ -1,56 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registrar usuario | Rentfagelu</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/login.css">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - Rentfagelu</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
+
 <body>
-  <header>
-    <nav>
-      <div class="logo">
-        <a href="index.html">Rentfagelu</a>
-      </div>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="propiedades.html">Propiedades</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="carrito.html" class="cart-link">🛒 Carrito <span class="cart-badge">0</span></a></li>
-      </ul>
-      <div class="user-actions">
-        <a href="login.html" id="login-link">Iniciar Sesión</a>
-        <a href="registro.html" id="register-link">Registrarse</a>
-        <div id="user-info" style="display: none;">
-          <span id="user-name"></span>
-          <button id="logout-btn">Cerrar Sesión</button>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <div class="register-container">
-    <h2>Registrar usuario</h2>
-    <form id="register-form">
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" required>
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="email" required>
-      <label for="password">Contraseña</label>
-      <input type="password" id="password" name="password" required minlength="6">
-      <button type="submit">Registrarse</button>
-    </form>
-    <div class="extra">
-      ¿Ya tienes cuenta?
-      <a href="login.html">Inicia sesión aquí</a>
-    </div>
-  </div>
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Rentfagelu</a>
+            </div>
+            <ul class="menu-navegacion">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="propiedades.html">Propiedades</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <script src="assets/auth.js"></script>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- SECCIÓN FORMULARIO DE REGISTRO -->
+        <section class="seccion-formulario-registro">
+            <div class="contenedor-registro">
+                <h2>Crear Cuenta</h2>
+                <form id="formulario-registro">
+                    <!-- Nombre completo -->
+                    <div class="grupo-campo">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
 
-  <footer class="main-footer">
+                    <!-- Correo electrónico -->
+                    <div class="grupo-campo">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div class="grupo-campo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+
+                    <!-- Contraseña -->
+                    <div class="grupo-campo">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" required minlength="6">
+                    </div>
+
+                    <!-- Confirmar contraseña -->
+                    <div class="grupo-campo">
+                        <label for="confirm-password">Confirmar Contraseña</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required minlength="6">
+                    </div>
+
+                    <!-- Botón de registro -->
+                    <button type="submit" class="boton-registro">Registrarse</button>
+                </form>
+
+                <!-- Enlace para iniciar sesión -->
+                <div class="enlace-sesion">
+                    <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="main-footer">
     <div class="footer-content">
       <div class="footer-logo">
         <div class="logo-section">
@@ -60,13 +84,12 @@
       </div>
       
       <div class="footer-columns">
+
         <div class="footer-column">
           <h4>Cuenta</h4>
           <ul>
             <li><a href="login.html">Iniciar sesión</a></li>
             <li><a href="registro.html">Registrarse</a></li>
-            <li><a href="#">¿Olvidó su contraseña?</a></li>
-            <li><a href="#">Mi perfil</a></li>
             <li><a href="carrito.html">Mi carrito</a></li>
           </ul>
         </div>
@@ -77,7 +100,6 @@
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="email:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
-  
           </ul>
         </div>
       </div>
@@ -88,8 +110,9 @@
     </div>
   </footer>
 
-  <script src="assets/script.js"></script>
-  <script src="assets/auth.js"></script>
-  <script src="assets/cart.js"></script>
+    <!-- SCRIPTS -->
+    <script src="assets/principal.js"></script>
+    <script src="assets/autenticacion.js"></script>
 </body>
+
 </html>

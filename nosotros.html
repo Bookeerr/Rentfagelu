@@ -3,90 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nosotros | Rentfagelu</title>
+  <title>Nosotros - Rentfagelu</title>
   <link rel="stylesheet" href="css/estilo.css">
 </head>
+
 <body>
+  <!-- ENCABEZADO Y NAVEGACIÓN -->
   <header>
     <nav>
       <div class="logo">
         <a href="index.html">Rentfagelu</a>
       </div>
-      <ul>
+      
+      <ul class="menu-navegacion">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="propiedades.html">Propiedades</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="carrito.html" class="cart-link">🛒 Carrito <span class="cart-badge">0</span></a></li>
       </ul>
-      <div class="user-actions">
-        <a href="login.html" id="login-link">Iniciar Sesión</a>
-        <a href="registro.html" id="register-link">Registrarse</a>
-        <div id="user-info" style="display: none;">
-          <span id="user-name"></span>
-          <button id="logout-btn">Cerrar Sesión</button>
+      
+      <div class="acciones-usuario">
+        <a href="login.html" id="enlace-login">Iniciar Sesión</a>
+        <a href="registro.html" id="enlace-registro">Registrarse</a>
+        <div id="info-usuario" style="display: none;">
+          <span id="nombre-usuario"></span>
+          <a href="admin.html" id="enlace-admin" style="display: none;">Panel Admin</a>
+          <button id="boton-cerrar-sesion">Cerrar Sesión</button>
         </div>
       </div>
     </nav>
   </header>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <main>
-    <section class="hero">
-      <h1>Sobre Nosotros</h1>
-      <p>
-        En <strong>Rentfagelu</strong> nos dedicamos a ayudarte a encontrar el hogar ideal en Santiago de Chile.<br>
-        Nuestra misión es ofrecer propiedades seleccionadas, atención personalizada y una experiencia segura y confiable.<br>
-        Valoramos la transparencia, el compromiso y la satisfacción de nuestros clientes.
-      </p>
+    <!-- SECCIÓN HERO NOSOTROS -->
+    <section class="seccion-hero-nosotros">
+      <div class="contenido-hero-nosotros">
+        <h1 class="titulo-nosotros">Sobre Nosotros</h1>
+        <p class="descripcion-nosotros">Conectamos familias con sus hogares ideales en Santiago de Chile</p>
+      </div>
     </section>
 
-    <section class="nosotros-equipo">
-      <h2>Nuestro equipo</h2>
-      <p>
-        Contamos con profesionales expertos en el rubro inmobiliario, listos para asesorarte en cada paso.<br>
-        Nos esforzamos por mantener altos estándares de calidad y ética en todos nuestros servicios.
-      </p>
-    </section>
-  </main>
-
-  <footer class="main-footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <div class="logo-section">
-          <h3>RENTFAGELU</h3>
-          <p>Tu hogar ideal te espera</p>
+    <!-- SECCIÓN SOBRE NOSOTROS -->
+    <section class="seccion-sobre-nosotros">
+      <div class="contenedor-principal">
+        <div class="contenido-sobre-nosotros">
+          <div class="texto-sobre-nosotros">
+            <h2 class="titulo-seccion">¿Quiénes Somos?</h2>
+            <p class="parrafo-principal">
+              En <strong>Rentfagelu</strong> somos una empresa especializada en la compra y venta de propiedades en Santiago de Chile. Con años de experiencia en el mercado inmobiliario, nos hemos consolidado como una plataforma confiable que conecta a familias con sus hogares ideales.
+            </p>
+            <p class="parrafo-secundario">
+              Nuestro compromiso va más allá de una simple transacción. Entendemos que encontrar el hogar perfecto es una de las decisiones más importantes en la vida de una persona, por eso nos dedicamos a brindar un servicio personalizado, transparente y de calidad excepcional.
+            </p>
+          </div>
         </div>
       </div>
-      
-      <div class="footer-columns">
+    </section>
 
-        <div class="footer-column">
+    <!-- SECCIÓN VISIÓN Y MISIÓN -->
+    <section class="seccion-vision-mision">
+      <div class="contenedor-principal">
+        <div class="contenido-vision-mision">
+          
+          <!-- NUESTRA MISIÓN -->
+          <article class="tarjeta-valor">
+            <h3 class="titulo-valor">Nuestra Misión</h3>
+            <p class="descripcion-valor">
+              Facilitar el proceso de compra y venta de propiedades en Santiago, ofreciendo un servicio integral, transparente y confiable. Nos comprometemos a ser el puente entre vendedores y compradores, garantizando experiencias exitosas y satisfactorias para todas las partes involucradas.
+            </p>
+          </article>
+
+          <!-- NUESTRA VISIÓN -->
+          <article class="tarjeta-valor">
+            <h3 class="titulo-valor">Nuestra Visión</h3>
+            <p class="descripcion-valor">
+              Ser la plataforma inmobiliaria líder en Santiago de Chile, reconocida por nuestra excelencia en el servicio, innovación tecnológica y compromiso con nuestros clientes. Aspiramos a transformar la experiencia de comprar y vender propiedades, haciendo que sea un proceso simple, seguro y gratificante.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="pie-pagina">
+    <div class="contenido-footer">
+      <div class="seccion-logo-footer">
+        <h3>RENTFAGELU</h3>
+        <p>Tu hogar ideal te espera</p>
+      </div>
+
+      <div class="columnas-footer">
+        <div class="columna-footer">
           <h4>Cuenta</h4>
           <ul>
             <li><a href="login.html">Iniciar sesión</a></li>
             <li><a href="registro.html">Registrarse</a></li>
-            <li><a href="carrito.html">Mi carrito</a></li>
           </ul>
         </div>
 
-        <div class="footer-column">
+        <div class="columna-footer">
           <h4>Contacto</h4>
           <ul>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="email:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
+            <li><a href="mailto:contacto@rentfagelu.cl">contacto@rentfagelu.cl</a></li>
           </ul>
         </div>
       </div>
     </div>
-    
-    <div class="footer-bottom">
+
+    <div class="fondo-footer">
       <p>&copy; 2025 Rentfagelu. Todos los derechos reservados. | Plataforma de arriendos en Santiago, Chile</p>
     </div>
   </footer>
 
-  <script src="assets/script.js"></script>
-  <script src="assets/auth.js"></script>
-  <script src="assets/cart.js"></script>
+  <!-- SCRIPTS -->
+  <script src="assets/principal.js"></script>
+  <script src="assets/autenticacion.js"></script>
 </body>
 </html>

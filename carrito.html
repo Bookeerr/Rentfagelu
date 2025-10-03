@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras | Rentfagelu</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/carrito.css">
+    <title>Carrito de Compras - Rentfagelu</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <header>
@@ -18,7 +17,7 @@
                 <li><a href="propiedades.html">Propiedades</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="carrito.html" class="cart-link">🛒 Carrito <span class="cart-badge">0</span></a></li>
+                <li><a href="carrito.html" class="cart-link"> Carrito <span class="contador-carrito">0</span></a></li>
             </ul>
             <div class="user-actions">
                 <a href="login.html" id="login-link">Iniciar Sesión</a>
@@ -39,7 +38,7 @@
             </nav>
 
             <div class="cart-header">
-                <h1>🛒 Carrito de Compras</h1>
+                <h1> Carrito de Compras</h1>
                 <p class="cart-subtitle">Gestiona las propiedades que deseas comprar</p>
             </div>
 
@@ -47,7 +46,7 @@
             <div class="cart-content">
                 <!-- Carrito vacío -->
                 <div id="empty-cart" class="empty-cart">
-                    <div class="empty-cart-icon">🛒</div>
+                    <div class="empty-cart-icon"></div>
                     <h3>Tu carrito está vacío</h3>
                     <p>¡Explora nuestras propiedades y encuentra tu hogar ideal!</p>
                     <a href="propiedades.html" class="btn-browse-properties">Ver Propiedades</a>
@@ -87,7 +86,7 @@
         <!-- Modal de pago exitoso -->
         <div id="payment-success-modal" class="payment-modal" style="display: none;">
             <div class="modal-content">
-                <div class="success-icon">✓ </div>
+                <div class="success-icon"> </div>
                 <h3>¡Pago Realizado Exitosamente!</h3>
                 <p>Tu pago ha sido procesado correctamente. Recibirás un correo de confirmación pronto.</p>
                 <div class="modal-actions">
@@ -133,162 +132,8 @@
     </div>
   </footer>
 
-    <script src="assets/script.js"></script>
-    <script src="assets/auth.js"></script>
-    <script src="assets/cart.js"></script>
-    <script>
-        // Funcionalidad del carrito de compras
-        document.addEventListener('DOMContentLoaded', function() {
-            loadCartItems();
-            
-            // Event listeners
-            document.getElementById('clear-cart').addEventListener('click', clearCart);
-            document.getElementById('continue-shopping').addEventListener('click', () => {
-                window.location.href = 'propiedades.html';
-            });
-            document.getElementById('proceed-payment').addEventListener('click', processPayment);
-            
-            // Event listener para cerrar el modal
-            document.getElementById('close-modal').addEventListener('click', closePaymentModal);
-        });
-
-        function loadCartItems() {
-            // Simulación de items en el carrito (en una aplicación real, esto vendría de localStorage o una API)
-            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-            
-            if (cartItems.length === 0) {
-                showEmptyCart();
-            } else {
-                showCartItems(cartItems);
-            }
-            
-            updateCartBadge(cartItems.length);
-        }
-
-        function showEmptyCart() {
-            document.getElementById('empty-cart').style.display = 'block';
-            document.getElementById('cart-items').style.display = 'none';
-        }
-
-        function showCartItems(items) {
-            document.getElementById('empty-cart').style.display = 'none';
-            document.getElementById('cart-items').style.display = 'block';
-            
-            const cartList = document.getElementById('cart-list');
-            cartList.innerHTML = '';
-            
-            let total = 0;
-            
-            items.forEach((item, index) => {
-                const itemElement = createCartItemElement(item, index);
-                cartList.appendChild(itemElement);
-                
-                // Calcular total (precio de venta completo)
-                const price = parseInt(item.price.replace(/[^\d]/g, ''));
-                total += price;
-            });
-            
-            document.getElementById('total-items').textContent = items.length;
-            document.getElementById('total-price').textContent = `$${total.toLocaleString()}`;
-        }
-
-        function createCartItemElement(item, index) {
-            const div = document.createElement('div');
-            div.className = 'cart-item';
-            
-            // Determinar tipo de pago
-            const paymentTypes = {
-                'cash': 'Pago al contado',
-                'credit': 'Crédito hipotecario',
-                'installments': 'Pago en cuotas'
-            };
-            const paymentText = paymentTypes[item.paymentType] || 'Pago al contado';
-            
-            div.innerHTML = `
-                <div class="cart-item-image">
-                    <div class="placeholder-img">🏠</div>
-                </div>
-                <div class="cart-item-info">
-                    <h4>${item.title || 'Propiedad sin nombre'}</h4>
-                    <p class="item-location">📍 ${item.location || 'Ubicación no especificada'}</p>
-                    <p class="item-payment">${paymentText}</p>
-                </div>
-                <div class="cart-item-actions">
-                    <button onclick="removeCartItem(${index})" class="btn-remove-item">
-                        🗑️ Eliminar
-                    </button>
-                </div>
-            `;
-            return div;
-        }
-
-        function removeCartItem(index) {
-            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-            cartItems.splice(index, 1);
-            localStorage.setItem('cartItems', JSON.stringify(cartItems));
-            loadCartItems();
-        }
-
-        function clearCart() {
-            if (confirm('¿Estás seguro de que quieres vaciar el carrito?')) {
-                localStorage.removeItem('cartItems');
-                loadCartItems();
-            }
-        }
-
-        function updateCartBadge(count) {
-            const badge = document.querySelector('.cart-badge');
-            if (badge) {
-                badge.textContent = count;
-            }
-        }
-
-        function processPayment() {
-            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-            
-            if (cartItems.length === 0) {
-                alert('No hay items en el carrito para procesar el pago.');
-                return;
-            }
-
-            // Simular procesamiento de pago (loading)
-            const paymentBtn = document.getElementById('proceed-payment');
-            const originalText = paymentBtn.textContent;
-            paymentBtn.textContent = 'Procesando...';
-            paymentBtn.disabled = true;
-
-            // Simular delay de procesamiento
-            setTimeout(() => {
-                // Restablecer botón
-                paymentBtn.textContent = originalText;
-                paymentBtn.disabled = false;
-                
-                // Mostrar modal de éxito
-                showPaymentSuccessModal();
-                
-                // Limpiar carrito después del pago exitoso
-                localStorage.removeItem('cartItems');
-                
-            }, 2000);
-        }
-
-        function showPaymentSuccessModal() {
-            document.getElementById('payment-success-modal').style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Prevenir scroll
-        }
-
-        function closePaymentModal() {
-            document.getElementById('payment-success-modal').style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restaurar scroll
-            
-            // Recargar el carrito para mostrar estado vacío
-            loadCartItems();
-            
-            // Opcional: redirigir a la página principal
-            setTimeout(() => {
-                window.location.href = 'index.html';
-            }, 500);
-        }
-    </script>
+    <script src="assets/principal.js"></script>
+    <script src="assets/autenticacion.js"></script>
+    <script src="assets/carrito.js"></script>
 </body>
 </html>
